@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c723104987fc4281891f72f04c52bf15" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoModel.Categoria" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Cliente" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Compra" Width="1.5" PointX="5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Detalle_Compra" Width="1.5" PointX="7.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.DetalleVenta" Width="1.5" PointX="11.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Producto" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Proveedor" Width="1.5" PointX="2.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.sysdiagram" Width="1.5" PointX="12.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Tipo_Venta" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.TipoPagoComp" Width="1.5" PointX="2.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.TipoPagoVenta" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Venta" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ProyectoModel.RefCategoria11" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefCliente14" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefCompra17" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefProveedor18" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefTipoPagoComp19" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefProducto16" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefProducto12" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefVenta13" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefTipo_Venta15" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.RefTipoPagoVenta20" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
