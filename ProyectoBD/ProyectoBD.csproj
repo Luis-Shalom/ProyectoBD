@@ -170,6 +170,12 @@
     <Compile Include="Catalogos\FormSucess.Designer.cs">
       <DependentUpon>FormSucess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
