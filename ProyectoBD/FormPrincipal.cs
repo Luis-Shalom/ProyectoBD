@@ -36,8 +36,13 @@ namespace ProyectoBD
 
         private void Salir_Click(object sender, EventArgs e)
         {
-            DialogResult result = new DialogResult();
-            Form mensaje = new 
+            //DialogResult result = new DialogResult();
+            //Form mensaje = new 
+        }
+
+        private void Sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

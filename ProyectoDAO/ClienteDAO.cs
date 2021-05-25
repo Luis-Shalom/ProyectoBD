@@ -11,8 +11,9 @@ namespace ProyectoDAO
 {
     public class ClienteDAO
     {
+        
 
-        ProyectoEntities1 db = new ProyectoEntities1();
+        ProyectoEntities2 db = new ProyectoEntities2();
 
 
         public bool Agregar (Cliente clientecls)
