@@ -59,17 +59,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Categoria.Designer.cs">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogos\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\FormSucess.cs">
+    <Compile Include="Catalogos\FacturaCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catalogos\FormSucess.Designer.cs">
-      <DependentUpon>FormSucess.cs</DependentUpon>
+    <Compile Include="Catalogos\FacturaCompra.Designer.cs">
+      <DependentUpon>FacturaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\FacturaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\FacturaVenta.Designer.cs">
+      <DependentUpon>FacturaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Producto.cs">
       <SubType>Form</SubType>
@@ -77,19 +89,28 @@
     <Compile Include="Catalogos\Producto.Designer.cs">
       <DependentUpon>Producto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Catalogos\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\FormSucess.resx">
-      <DependentUpon>FormSucess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
