@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace ProyectoBD.Catalogos
 {
-    public partial class Proveedores : Form
+    public partial class FormCliente : Form
     {
-        public Proveedores()
+        public FormCliente()
         {
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

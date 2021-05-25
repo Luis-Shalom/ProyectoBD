@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoEDM.ModeloBD;
+using ProyectoBD.Catalogos;
 namespace ProyectoBD
 {
     public partial class FormPrincipal : Form
@@ -41,6 +42,43 @@ namespace ProyectoBD
         }
 
         private void Sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            pictureBox4.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            pictureBox4.Visible = true;
+            btnMaximizar.Visible = false;
+        }
+
+        private void btncliente_Click(object sender, EventArgs e)
+        {
+            Form  Cliente = new FormCliente();
+           Cliente.Visible = true;
+            Visible = false;
+        }
+
+        private void btnArea_Click(object sender, EventArgs e)
         {
 
         }
