@@ -14,7 +14,7 @@ namespace ProyectoBD.Catalogos
     {
         public Categoria()
         {
-            InitializeComponent();
+           //InitializeComponent();
         }
     }
 }
