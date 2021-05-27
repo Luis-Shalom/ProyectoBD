@@ -36,6 +36,20 @@ namespace ProyectoBD
             this.Home = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ListViewCliente = new MaterialSkin.Controls.MaterialListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtid = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtedad = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
             this.txttelef = new MaterialSkin.Controls.MaterialTextBox();
             this.txtapellido = new MaterialSkin.Controls.MaterialTextBox();
             this.txtnombre = new MaterialSkin.Controls.MaterialTextBox();
@@ -109,15 +123,10 @@ namespace ProyectoBD
             this.materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialCheckbox5 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.txtedad = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtid = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtVent = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtventa = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.materialCard2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.materialCard3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -165,8 +174,8 @@ namespace ProyectoBD
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.txtVent);
-            this.materialCard2.Controls.Add(this.txtventa);
+            this.materialCard2.Controls.Add(this.dataGridView1);
+            this.materialCard2.Controls.Add(this.ListViewCliente);
             this.materialCard2.Controls.Add(this.txtid);
             this.materialCard2.Controls.Add(this.materialLabel19);
             this.materialCard2.Controls.Add(this.txtedad);
@@ -191,20 +200,155 @@ namespace ProyectoBD
             this.materialCard2.Controls.Add(this.materialLabel5);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(28, 37);
+            this.materialCard2.Location = new System.Drawing.Point(14, 33);
             this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(874, 532);
+            this.materialCard2.Size = new System.Drawing.Size(903, 532);
             this.materialCard2.TabIndex = 10;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(621, 371);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 22;
+            // 
+            // ListViewCliente
+            // 
+            this.ListViewCliente.AutoSizeTable = false;
+            this.ListViewCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ListViewCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListViewCliente.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.dI});
+            this.ListViewCliente.Depth = 0;
+            this.ListViewCliente.FullRowSelect = true;
+            this.ListViewCliente.HideSelection = false;
+            this.ListViewCliente.Location = new System.Drawing.Point(327, 56);
+            this.ListViewCliente.MinimumSize = new System.Drawing.Size(200, 100);
+            this.ListViewCliente.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ListViewCliente.MouseState = MaterialSkin.MouseState.OUT;
+            this.ListViewCliente.Name = "ListViewCliente";
+            this.ListViewCliente.OwnerDraw = true;
+            this.ListViewCliente.Size = new System.Drawing.Size(521, 241);
+            this.ListViewCliente.TabIndex = 21;
+            this.ListViewCliente.UseCompatibleStateImageBehavior = false;
+            this.ListViewCliente.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.DisplayIndex = 7;
+            this.columnHeader13.Text = "ID";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.DisplayIndex = 0;
+            this.columnHeader7.Text = "CODIGO";
+            this.columnHeader7.Width = 89;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.DisplayIndex = 1;
+            this.columnHeader8.Text = "NOMBRE";
+            this.columnHeader8.Width = 91;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.DisplayIndex = 2;
+            this.columnHeader9.Text = "APELLIDO";
+            this.columnHeader9.Width = 113;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.DisplayIndex = 3;
+            this.columnHeader10.Text = "SEXO";
+            this.columnHeader10.Width = 86;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.DisplayIndex = 4;
+            this.columnHeader11.Text = "TELEFONO";
+            this.columnHeader11.Width = 132;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.DisplayIndex = 5;
+            this.columnHeader12.Text = "EDAD";
+            // 
+            // dI
+            // 
+            this.dI.DisplayIndex = 6;
+            this.dI.Text = "DIRECCION";
+            // 
+            // txtid
+            // 
+            this.txtid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtid.Depth = 0;
+            this.txtid.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtid.Location = new System.Drawing.Point(80, 408);
+            this.txtid.MaxLength = 50;
+            this.txtid.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtid.Multiline = false;
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(203, 50);
+            this.txtid.TabIndex = 20;
+            this.txtid.Text = "";
+            // 
+            // materialLabel19
+            // 
+            this.materialLabel19.AutoSize = true;
+            this.materialLabel19.BackColor = System.Drawing.Color.White;
+            this.materialLabel19.Depth = 0;
+            this.materialLabel19.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel19.Location = new System.Drawing.Point(7, 435);
+            this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel19.Name = "materialLabel19";
+            this.materialLabel19.Size = new System.Drawing.Size(22, 19);
+            this.materialLabel19.TabIndex = 19;
+            this.materialLabel19.Text = "Id: ";
+            // 
+            // txtedad
+            // 
+            this.txtedad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtedad.Depth = 0;
+            this.txtedad.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtedad.Location = new System.Drawing.Point(80, 347);
+            this.txtedad.MaxLength = 50;
+            this.txtedad.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtedad.Multiline = false;
+            this.txtedad.Name = "txtedad";
+            this.txtedad.Size = new System.Drawing.Size(203, 50);
+            this.txtedad.TabIndex = 18;
+            this.txtedad.Text = "";
+            // 
+            // materialLabel18
+            // 
+            this.materialLabel18.AutoSize = true;
+            this.materialLabel18.BackColor = System.Drawing.Color.White;
+            this.materialLabel18.Depth = 0;
+            this.materialLabel18.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel18.Location = new System.Drawing.Point(7, 374);
+            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel18.Name = "materialLabel18";
+            this.materialLabel18.Size = new System.Drawing.Size(45, 19);
+            this.materialLabel18.TabIndex = 17;
+            this.materialLabel18.Text = "Edad: ";
             // 
             // txttelef
             // 
             this.txttelef.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txttelef.Depth = 0;
             this.txttelef.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txttelef.Location = new System.Drawing.Point(99, 300);
+            this.txttelef.Location = new System.Drawing.Point(80, 291);
             this.txttelef.MaxLength = 50;
             this.txttelef.MouseState = MaterialSkin.MouseState.OUT;
             this.txttelef.Multiline = false;
@@ -218,7 +362,7 @@ namespace ProyectoBD
             this.txtapellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtapellido.Depth = 0;
             this.txtapellido.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtapellido.Location = new System.Drawing.Point(99, 186);
+            this.txtapellido.Location = new System.Drawing.Point(80, 177);
             this.txtapellido.MaxLength = 50;
             this.txtapellido.MouseState = MaterialSkin.MouseState.OUT;
             this.txtapellido.Multiline = false;
@@ -232,7 +376,7 @@ namespace ProyectoBD
             this.txtnombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtnombre.Depth = 0;
             this.txtnombre.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtnombre.Location = new System.Drawing.Point(99, 121);
+            this.txtnombre.Location = new System.Drawing.Point(80, 112);
             this.txtnombre.MaxLength = 50;
             this.txtnombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtnombre.Multiline = false;
@@ -248,7 +392,7 @@ namespace ProyectoBD
             this.btnsalirC.DrawShadows = true;
             this.btnsalirC.HighEmphasis = true;
             this.btnsalirC.Icon = null;
-            this.btnsalirC.Location = new System.Drawing.Point(489, 426);
+            this.btnsalirC.Location = new System.Drawing.Point(498, 476);
             this.btnsalirC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnsalirC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnsalirC.Name = "btnsalirC";
@@ -266,7 +410,7 @@ namespace ProyectoBD
             this.btnelimiC.DrawShadows = true;
             this.btnelimiC.HighEmphasis = true;
             this.btnelimiC.Icon = null;
-            this.btnelimiC.Location = new System.Drawing.Point(238, 426);
+            this.btnelimiC.Location = new System.Drawing.Point(247, 476);
             this.btnelimiC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnelimiC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnelimiC.Name = "btnelimiC";
@@ -276,6 +420,7 @@ namespace ProyectoBD
             this.btnelimiC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnelimiC.UseAccentColor = false;
             this.btnelimiC.UseVisualStyleBackColor = true;
+            this.btnelimiC.Click += new System.EventHandler(this.btnelimiC_Click);
             // 
             // btncanceC
             // 
@@ -284,7 +429,7 @@ namespace ProyectoBD
             this.btncanceC.DrawShadows = true;
             this.btncanceC.HighEmphasis = true;
             this.btncanceC.Icon = null;
-            this.btncanceC.Location = new System.Drawing.Point(357, 426);
+            this.btncanceC.Location = new System.Drawing.Point(366, 476);
             this.btncanceC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btncanceC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btncanceC.Name = "btncanceC";
@@ -302,7 +447,7 @@ namespace ProyectoBD
             this.btnEditC.DrawShadows = true;
             this.btnEditC.HighEmphasis = true;
             this.btnEditC.Icon = null;
-            this.btnEditC.Location = new System.Drawing.Point(139, 426);
+            this.btnEditC.Location = new System.Drawing.Point(148, 476);
             this.btnEditC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEditC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEditC.Name = "btnEditC";
@@ -323,7 +468,7 @@ namespace ProyectoBD
             this.btnguarC.DrawShadows = true;
             this.btnguarC.HighEmphasis = true;
             this.btnguarC.Icon = null;
-            this.btnguarC.Location = new System.Drawing.Point(25, 426);
+            this.btnguarC.Location = new System.Drawing.Point(34, 476);
             this.btnguarC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnguarC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnguarC.Name = "btnguarC";
@@ -341,7 +486,7 @@ namespace ProyectoBD
             this.materialLabel1.BackColor = System.Drawing.Color.White;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(32, 82);
+            this.materialLabel1.Location = new System.Drawing.Point(13, 73);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(59, 19);
@@ -356,7 +501,7 @@ namespace ProyectoBD
             this.multilineDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.multilineDir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.multilineDir.Hint = "";
-            this.multilineDir.Location = new System.Drawing.Point(404, 235);
+            this.multilineDir.Location = new System.Drawing.Point(338, 353);
             this.multilineDir.MouseState = MaterialSkin.MouseState.HOVER;
             this.multilineDir.Name = "multilineDir";
             this.multilineDir.Size = new System.Drawing.Size(191, 76);
@@ -368,7 +513,7 @@ namespace ProyectoBD
             this.txtCodig.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodig.Depth = 0;
             this.txtCodig.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtCodig.Location = new System.Drawing.Point(97, 59);
+            this.txtCodig.Location = new System.Drawing.Point(78, 50);
             this.txtCodig.MaxLength = 50;
             this.txtCodig.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCodig.Multiline = false;
@@ -383,7 +528,7 @@ namespace ProyectoBD
             this.materialLabel6.BackColor = System.Drawing.Color.White;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(419, 202);
+            this.materialLabel6.Location = new System.Drawing.Point(335, 318);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(151, 19);
@@ -396,7 +541,7 @@ namespace ProyectoBD
             this.materialLabel2.BackColor = System.Drawing.Color.White;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(32, 142);
+            this.materialLabel2.Location = new System.Drawing.Point(13, 133);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(65, 19);
@@ -407,7 +552,7 @@ namespace ProyectoBD
             // 
             this.CheckboxM.AutoSize = true;
             this.CheckboxM.Depth = 0;
-            this.CheckboxM.Location = new System.Drawing.Point(186, 251);
+            this.CheckboxM.Location = new System.Drawing.Point(167, 242);
             this.CheckboxM.Margin = new System.Windows.Forms.Padding(0);
             this.CheckboxM.MouseLocation = new System.Drawing.Point(-1, -1);
             this.CheckboxM.MouseState = MaterialSkin.MouseState.HOVER;
@@ -422,7 +567,7 @@ namespace ProyectoBD
             // 
             this.CheckboxF.AutoSize = true;
             this.CheckboxF.Depth = 0;
-            this.CheckboxF.Location = new System.Drawing.Point(99, 251);
+            this.CheckboxF.Location = new System.Drawing.Point(80, 242);
             this.CheckboxF.Margin = new System.Windows.Forms.Padding(0);
             this.CheckboxF.MouseLocation = new System.Drawing.Point(-1, -1);
             this.CheckboxF.MouseState = MaterialSkin.MouseState.HOVER;
@@ -439,7 +584,7 @@ namespace ProyectoBD
             this.materialLabel3.BackColor = System.Drawing.Color.White;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(32, 202);
+            this.materialLabel3.Location = new System.Drawing.Point(13, 193);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(66, 19);
@@ -452,7 +597,7 @@ namespace ProyectoBD
             this.materialLabel4.BackColor = System.Drawing.Color.White;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(36, 260);
+            this.materialLabel4.Location = new System.Drawing.Point(13, 257);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(44, 19);
@@ -465,7 +610,7 @@ namespace ProyectoBD
             this.materialLabel5.BackColor = System.Drawing.Color.White;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(30, 321);
+            this.materialLabel5.Location = new System.Drawing.Point(11, 312);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(72, 19);
@@ -1229,87 +1374,6 @@ namespace ProyectoBD
             this.materialCheckbox5.Text = "materialCheckbox5";
             this.materialCheckbox5.UseVisualStyleBackColor = true;
             // 
-            // txtedad
-            // 
-            this.txtedad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtedad.Depth = 0;
-            this.txtedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtedad.Location = new System.Drawing.Point(380, 59);
-            this.txtedad.MaxLength = 50;
-            this.txtedad.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtedad.Multiline = false;
-            this.txtedad.Name = "txtedad";
-            this.txtedad.Size = new System.Drawing.Size(203, 50);
-            this.txtedad.TabIndex = 18;
-            this.txtedad.Text = "";
-            // 
-            // materialLabel18
-            // 
-            this.materialLabel18.AutoSize = true;
-            this.materialLabel18.BackColor = System.Drawing.Color.White;
-            this.materialLabel18.Depth = 0;
-            this.materialLabel18.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel18.Location = new System.Drawing.Point(311, 80);
-            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel18.Name = "materialLabel18";
-            this.materialLabel18.Size = new System.Drawing.Size(45, 19);
-            this.materialLabel18.TabIndex = 17;
-            this.materialLabel18.Text = "Edad: ";
-            // 
-            // txtid
-            // 
-            this.txtid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtid.Depth = 0;
-            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtid.Location = new System.Drawing.Point(380, 120);
-            this.txtid.MaxLength = 50;
-            this.txtid.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtid.Multiline = false;
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(203, 50);
-            this.txtid.TabIndex = 20;
-            this.txtid.Text = "";
-            // 
-            // materialLabel19
-            // 
-            this.materialLabel19.AutoSize = true;
-            this.materialLabel19.BackColor = System.Drawing.Color.White;
-            this.materialLabel19.Depth = 0;
-            this.materialLabel19.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel19.Location = new System.Drawing.Point(311, 141);
-            this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel19.Name = "materialLabel19";
-            this.materialLabel19.Size = new System.Drawing.Size(22, 19);
-            this.materialLabel19.TabIndex = 19;
-            this.materialLabel19.Text = "Id: ";
-            // 
-            // txtVent
-            // 
-            this.txtVent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVent.Depth = 0;
-            this.txtVent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtVent.Location = new System.Drawing.Point(658, 59);
-            this.txtVent.MaxLength = 50;
-            this.txtVent.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtVent.Multiline = false;
-            this.txtVent.Name = "txtVent";
-            this.txtVent.Size = new System.Drawing.Size(203, 50);
-            this.txtVent.TabIndex = 22;
-            this.txtVent.Text = "";
-            // 
-            // txtventa
-            // 
-            this.txtventa.AutoSize = true;
-            this.txtventa.BackColor = System.Drawing.Color.White;
-            this.txtventa.Depth = 0;
-            this.txtventa.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtventa.Location = new System.Drawing.Point(604, 80);
-            this.txtventa.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtventa.Name = "txtventa";
-            this.txtventa.Size = new System.Drawing.Size(48, 19);
-            this.txtventa.TabIndex = 21;
-            this.txtventa.Text = "venta: ";
-            // 
             // Form1Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1326,6 +1390,7 @@ namespace ProyectoBD
             this.tabPage2.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.materialCard3.ResumeLayout(false);
             this.materialCard3.PerformLayout();
@@ -1418,7 +1483,15 @@ namespace ProyectoBD
         private MaterialSkin.Controls.MaterialLabel materialLabel18;
         private MaterialSkin.Controls.MaterialTextBox txtid;
         private MaterialSkin.Controls.MaterialLabel materialLabel19;
-        private MaterialSkin.Controls.MaterialTextBox txtVent;
-        private MaterialSkin.Controls.MaterialLabel txtventa;
+        private MaterialSkin.Controls.MaterialListView ListViewCliente;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader dI;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

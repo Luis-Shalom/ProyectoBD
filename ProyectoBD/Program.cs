@@ -17,7 +17,7 @@ namespace ProyectoBD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1Principal());
+            Application.Run(new FormPrincipal());
             
         }
     }

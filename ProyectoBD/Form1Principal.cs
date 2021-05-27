@@ -10,15 +10,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using ProyectoDAO;
+using System.Data.Entity;
 using ProyectoEDM;
 using ProyectoEDM.ModeloBD;
+
 namespace ProyectoBD
 {
     public partial class Form1Principal : MaterialForm
     {
         private ClienteDAO oclienteDAO = new ClienteDAO();
         private bool NuevoRegistro = false;
-        private Cliente ocliente;
+        private Cliente oclientes;
 
 
         //       readonly MaterialSkin.MaterialSkinManager materialSkinManager;
@@ -61,9 +63,27 @@ namespace ProyectoBD
             //cboTipo.SelectedIndex = -1;  //no hay nada seleccionado
         }
 
+
+        private  void cargar()
+        {
+
+
+              using  (ProyectoEntities2 contexto = new ProyectoEntities2())
+            {
+                var lst = from d in contexto.Clientes
+                          select d;
+                dataGridView1.DataSource = lst.ToList();
+
+            }
+           
+            
+
+
+
+        } 
         private void btnguar_Click(object sender, EventArgs e) //BTN DE CLIENTE GUARDAR
         {
-            if (NuevoRegistro == true)
+            if (NuevoRegistro == false)
             {
                 Cliente oCliente = new Cliente();
                 oCliente.Codigo= txtCodig.Text.Trim();
@@ -88,43 +108,71 @@ namespace ProyectoBD
                 {
                     MessageBox.Show("El nuevo registro fue grabado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // return;
+                    cargar();
                 }
 
             }
-            //else
-            //{
-                //Cliente oCliente = oclienteDAO.Buscar(txtCodig.Text.Trim());
-                //oCliente.Nombre = txtnombre.Text.Trim();
-                //oCliente.Apellido = txtapellido.Text.Trim();
-                //oCliente.Sexo = CheckboxF.Text.Trim();
-                //oCliente.Sexo = CheckboxF.Text.Trim();
-                //oCliente.Direccion = multilineDir.Text.Trim();
+            else
+            {
+                Cliente oCliente = oclienteDAO.Buscar(txtCodig.Text.Trim());
+                oCliente.Nombre = txtnombre.Text.Trim();
+                oCliente.Apellido = txtapellido.Text.Trim();
+                oCliente.Sexo = CheckboxF.Text.Trim();
+                oCliente.Sexo = CheckboxF.Text.Trim();
+                oCliente.Direccion = multilineDir.Text.Trim();
+                oCliente.Edad = (int.Parse(txtedad.Text.Trim()));
+                oCliente.IdCliente = (int.Parse(txtid.Text.Trim()));
                 //oCliente.NombresDelCliente = txtNombres.Text.Trim();
                 //oCliente.ApellidosDelCliente = txtApellidos.Text.Trim();
                 //oCliente.TipoDeClienteId = (int)cboTipo.SelectedValue;
 
-                //if (oclienteDAO.Modificar(oCliente) == false)
-                //{
-                //    MessageBox.Show("El Registro no fue Modificado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    //return;
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Registro Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    // return;
-                //}
+                if (oclienteDAO.Modificar(oCliente) == false)
+                {
+                    MessageBox.Show("El Registro no fue Modificado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //return;
+                }
+                else
+                {
+                    MessageBox.Show("Registro Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // return;
+                }
+                
 
-
-            //}
-            //LimpiarControles();
-            //DesactivaControles(true);
-            //txtCodig.Text = "";
-            //txtCodig.Focus();
+            }
+            LimpiarControles();
+            DesactivaControles(true);
+            txtCodig.Text = "";
+            txtCodig.Focus();
 
         }
         private void txt3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnelimiC_Click(object sender, EventArgs e)
+        {
+            {
+                Cliente oCliente = oclienteDAO.Buscar(txtCodig.Text.Trim());
+                if (oclienteDAO.Eliminar(oCliente) == false)
+                {
+                    MessageBox.Show("El registro no puede ser eliminado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+                else
+                {
+                    MessageBox.Show("El registro eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LimpiarControles();
+                    DesactivaControles(true);
+                    txtCodig.Text = "";
+                    txtCodig.Focus();
+
+                    return;
+
+                }
+            }
         }
     }
 }

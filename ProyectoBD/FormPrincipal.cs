@@ -61,6 +61,7 @@ namespace ProyectoBD
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            MessageBox.Show("CERRANDO");
 
         }
 
@@ -73,14 +74,38 @@ namespace ProyectoBD
 
         private void btncliente_Click(object sender, EventArgs e)
         {
-            Form  Cliente = new FormCliente();
-           Cliente.Visible = true;
-            Visible = false;
+            // Form  Cliente = new FormCliente();
+            //Cliente.Visible = true;
+            // Visible = false;
+
+            AbrirFormHijos(new FormCliente());
         }
+
+
+
 
         private void btnArea_Click(object sender, EventArgs e)
         {
+            AbrirFormHijos(new Proveedor());
+              
+        }
+        //https://www.youtube.com/watch?v=Z7TfV7LZzp4
+        private void AbrirFormHijos( object formhijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+            
+                this.panelContenedor.Controls.RemoveAt(0);
 
+                Form fh = formhijo as Form;
+
+                fh.TopLevel = true;
+                fh.Dock = DockStyle.Fill;
+                this.panelContenedor.Controls.Add(fh);
+                this.panelContenedor.Tag = fh;
+                fh.Show();
+
+
+            
         }
     }
 }
