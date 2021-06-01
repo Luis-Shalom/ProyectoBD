@@ -38,7 +38,7 @@
             this.txtCodig = new MaterialSkin.Controls.MaterialTextBox();
             this.multilineDir = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnguarC = new MaterialSkin.Controls.MaterialButton();
+            this.btnguardar = new MaterialSkin.Controls.MaterialButton();
             this.btnEditC = new MaterialSkin.Controls.MaterialButton();
             this.btncanceC = new MaterialSkin.Controls.MaterialButton();
             this.btnelimiC = new MaterialSkin.Controls.MaterialButton();
@@ -50,15 +50,6 @@
             this.txtedad = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
             this.txtid = new MaterialSkin.Controls.MaterialTextBox();
-            this.ListViewCliente = new MaterialSkin.Controls.MaterialListView();
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -153,7 +144,7 @@
             this.materialLabel6.BackColor = System.Drawing.Color.White;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(335, 318);
+            this.materialLabel6.Location = new System.Drawing.Point(75, 420);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(151, 19);
@@ -164,7 +155,7 @@
             // 
             this.txtCodig.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodig.Depth = 0;
-            this.txtCodig.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodig.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtCodig.Location = new System.Drawing.Point(78, 50);
             this.txtCodig.MaxLength = 50;
             this.txtCodig.MouseState = MaterialSkin.MouseState.OUT;
@@ -177,12 +168,12 @@
             // multilineDir
             // 
             this.multilineDir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.multilineDir.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.multilineDir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.multilineDir.Depth = 0;
             this.multilineDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.multilineDir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.multilineDir.Hint = "";
-            this.multilineDir.Location = new System.Drawing.Point(338, 353);
+            this.multilineDir.Location = new System.Drawing.Point(78, 455);
             this.multilineDir.MouseState = MaterialSkin.MouseState.HOVER;
             this.multilineDir.Name = "multilineDir";
             this.multilineDir.Size = new System.Drawing.Size(191, 76);
@@ -202,26 +193,27 @@
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Código: ";
             // 
-            // btnguarC
+            // btnguardar
             // 
-            this.btnguarC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnguardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnguarC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnguarC.Depth = 0;
-            this.btnguarC.DrawShadows = true;
-            this.btnguarC.HighEmphasis = true;
-            this.btnguarC.Icon = null;
-            this.btnguarC.Location = new System.Drawing.Point(34, 476);
-            this.btnguarC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnguarC.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnguarC.Name = "btnguarC";
-            this.btnguarC.Size = new System.Drawing.Size(88, 36);
-            this.btnguarC.TabIndex = 9;
-            this.btnguarC.Text = "Guardar";
-            this.btnguarC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnguarC.UseAccentColor = false;
-            this.btnguarC.UseVisualStyleBackColor = true;
+            this.btnguardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnguardar.Depth = 0;
+            this.btnguardar.DrawShadows = true;
+            this.btnguardar.HighEmphasis = true;
+            this.btnguardar.Icon = null;
+            this.btnguardar.Location = new System.Drawing.Point(365, 473);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnguardar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(88, 36);
+            this.btnguardar.TabIndex = 9;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnguardar.UseAccentColor = false;
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btnEditC
             // 
@@ -230,7 +222,7 @@
             this.btnEditC.DrawShadows = true;
             this.btnEditC.HighEmphasis = true;
             this.btnEditC.Icon = null;
-            this.btnEditC.Location = new System.Drawing.Point(148, 476);
+            this.btnEditC.Location = new System.Drawing.Point(479, 473);
             this.btnEditC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEditC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEditC.Name = "btnEditC";
@@ -248,7 +240,7 @@
             this.btncanceC.DrawShadows = true;
             this.btncanceC.HighEmphasis = true;
             this.btncanceC.Icon = null;
-            this.btncanceC.Location = new System.Drawing.Point(366, 476);
+            this.btncanceC.Location = new System.Drawing.Point(697, 473);
             this.btncanceC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btncanceC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btncanceC.Name = "btncanceC";
@@ -266,7 +258,7 @@
             this.btnelimiC.DrawShadows = true;
             this.btnelimiC.HighEmphasis = true;
             this.btnelimiC.Icon = null;
-            this.btnelimiC.Location = new System.Drawing.Point(247, 476);
+            this.btnelimiC.Location = new System.Drawing.Point(578, 473);
             this.btnelimiC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnelimiC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnelimiC.Name = "btnelimiC";
@@ -284,7 +276,7 @@
             this.btnsalirC.DrawShadows = true;
             this.btnsalirC.HighEmphasis = true;
             this.btnsalirC.Icon = null;
-            this.btnsalirC.Location = new System.Drawing.Point(498, 476);
+            this.btnsalirC.Location = new System.Drawing.Point(829, 473);
             this.btnsalirC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnsalirC.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnsalirC.Name = "btnsalirC";
@@ -299,7 +291,7 @@
             // 
             this.txtnombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtnombre.Depth = 0;
-            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtnombre.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtnombre.Location = new System.Drawing.Point(80, 112);
             this.txtnombre.MaxLength = 50;
             this.txtnombre.MouseState = MaterialSkin.MouseState.OUT;
@@ -313,7 +305,7 @@
             // 
             this.txtapellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtapellido.Depth = 0;
-            this.txtapellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtapellido.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtapellido.Location = new System.Drawing.Point(80, 177);
             this.txtapellido.MaxLength = 50;
             this.txtapellido.MouseState = MaterialSkin.MouseState.OUT;
@@ -327,7 +319,7 @@
             // 
             this.txttelef.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txttelef.Depth = 0;
-            this.txttelef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txttelef.Font = new System.Drawing.Font("Roboto", 12F);
             this.txttelef.Location = new System.Drawing.Point(80, 291);
             this.txttelef.MaxLength = 50;
             this.txttelef.MouseState = MaterialSkin.MouseState.OUT;
@@ -354,7 +346,7 @@
             // 
             this.txtedad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtedad.Depth = 0;
-            this.txtedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtedad.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtedad.Location = new System.Drawing.Point(80, 347);
             this.txtedad.MaxLength = 50;
             this.txtedad.MouseState = MaterialSkin.MouseState.OUT;
@@ -370,7 +362,7 @@
             this.materialLabel19.BackColor = System.Drawing.Color.White;
             this.materialLabel19.Depth = 0;
             this.materialLabel19.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel19.Location = new System.Drawing.Point(7, 435);
+            this.materialLabel19.Location = new System.Drawing.Point(7, 14);
             this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel19.Name = "materialLabel19";
             this.materialLabel19.Size = new System.Drawing.Size(22, 19);
@@ -381,102 +373,28 @@
             // 
             this.txtid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtid.Depth = 0;
-            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtid.Location = new System.Drawing.Point(80, 408);
+            this.txtid.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtid.Location = new System.Drawing.Point(35, 0);
             this.txtid.MaxLength = 50;
             this.txtid.MouseState = MaterialSkin.MouseState.OUT;
             this.txtid.Multiline = false;
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(203, 50);
+            this.txtid.Size = new System.Drawing.Size(72, 50);
             this.txtid.TabIndex = 20;
             this.txtid.Text = "";
-            // 
-            // ListViewCliente
-            // 
-            this.ListViewCliente.AutoSizeTable = false;
-            this.ListViewCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ListViewCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListViewCliente.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader13,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.dI});
-            this.ListViewCliente.Depth = 0;
-            this.ListViewCliente.FullRowSelect = true;
-            this.ListViewCliente.HideSelection = false;
-            this.ListViewCliente.Location = new System.Drawing.Point(327, 56);
-            this.ListViewCliente.MinimumSize = new System.Drawing.Size(200, 100);
-            this.ListViewCliente.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.ListViewCliente.MouseState = MaterialSkin.MouseState.OUT;
-            this.ListViewCliente.Name = "ListViewCliente";
-            this.ListViewCliente.OwnerDraw = true;
-            this.ListViewCliente.Size = new System.Drawing.Size(521, 241);
-            this.ListViewCliente.TabIndex = 21;
-            this.ListViewCliente.UseCompatibleStateImageBehavior = false;
-            this.ListViewCliente.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.DisplayIndex = 7;
-            this.columnHeader13.Text = "ID";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.DisplayIndex = 0;
-            this.columnHeader7.Text = "CODIGO";
-            this.columnHeader7.Width = 89;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.DisplayIndex = 1;
-            this.columnHeader8.Text = "NOMBRE";
-            this.columnHeader8.Width = 91;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.DisplayIndex = 2;
-            this.columnHeader9.Text = "APELLIDO";
-            this.columnHeader9.Width = 113;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.DisplayIndex = 3;
-            this.columnHeader10.Text = "SEXO";
-            this.columnHeader10.Width = 86;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.DisplayIndex = 4;
-            this.columnHeader11.Text = "TELEFONO";
-            this.columnHeader11.Width = 132;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.DisplayIndex = 5;
-            this.columnHeader12.Text = "EDAD";
-            // 
-            // dI
-            // 
-            this.dI.DisplayIndex = 6;
-            this.dI.Text = "DIRECCION";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(621, 371);
+            this.dataGridView1.Location = new System.Drawing.Point(357, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(532, 343);
             this.dataGridView1.TabIndex = 22;
             // 
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard2.Controls.Add(this.dataGridView1);
-            this.materialCard2.Controls.Add(this.ListViewCliente);
             this.materialCard2.Controls.Add(this.txtid);
             this.materialCard2.Controls.Add(this.materialLabel19);
             this.materialCard2.Controls.Add(this.txtedad);
@@ -488,7 +406,7 @@
             this.materialCard2.Controls.Add(this.btnelimiC);
             this.materialCard2.Controls.Add(this.btncanceC);
             this.materialCard2.Controls.Add(this.btnEditC);
-            this.materialCard2.Controls.Add(this.btnguarC);
+            this.materialCard2.Controls.Add(this.btnguardar);
             this.materialCard2.Controls.Add(this.materialLabel1);
             this.materialCard2.Controls.Add(this.multilineDir);
             this.materialCard2.Controls.Add(this.txtCodig);
@@ -501,12 +419,12 @@
             this.materialCard2.Controls.Add(this.materialLabel5);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(52, 48);
+            this.materialCard2.Location = new System.Drawing.Point(34, 36);
             this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(1077, 629);
+            this.materialCard2.Size = new System.Drawing.Size(936, 592);
             this.materialCard2.TabIndex = 11;
             // 
             // FormCliente
@@ -514,11 +432,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1182, 736);
+            this.ClientSize = new System.Drawing.Size(993, 666);
             this.Controls.Add(this.materialCard2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCliente";
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.FormCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
@@ -538,7 +457,7 @@
         private MaterialSkin.Controls.MaterialTextBox txtCodig;
         private MaterialSkin.Controls.MaterialMultiLineTextBox multilineDir;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialButton btnguarC;
+        private MaterialSkin.Controls.MaterialButton btnguardar;
         public MaterialSkin.Controls.MaterialButton btnEditC;
         private MaterialSkin.Controls.MaterialButton btncanceC;
         private MaterialSkin.Controls.MaterialButton btnelimiC;
@@ -550,15 +469,6 @@
         private MaterialSkin.Controls.MaterialTextBox txtedad;
         private MaterialSkin.Controls.MaterialLabel materialLabel19;
         private MaterialSkin.Controls.MaterialTextBox txtid;
-        private MaterialSkin.Controls.MaterialListView ListViewCliente;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader dI;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
     }

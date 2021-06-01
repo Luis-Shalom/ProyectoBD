@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoBD.Catalogos
 {
-    public partial class Categoria : Form
+    public partial class FormCategoria : Form
     {
-        public Categoria()
+        public FormCategoria()
         {
-           //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

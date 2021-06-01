@@ -37,10 +37,10 @@
             this.DASHBOARD = new System.Windows.Forms.Label();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.Sidebar = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnConsul = new System.Windows.Forms.Button();
-            this.btnHorario = new System.Windows.Forms.Button();
-            this.btnPermanente = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
+            this.btnventa = new System.Windows.Forms.Button();
+            this.btnCategoria = new System.Windows.Forms.Button();
+            this.btnProducto = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btncliente = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,6 +71,7 @@
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(1116, 60);
             this.Header.TabIndex = 0;
+            this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
             // 
             // pictureBox4
             // 
@@ -150,10 +151,10 @@
             // Sidebar
             // 
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
-            this.Sidebar.Controls.Add(this.button1);
-            this.Sidebar.Controls.Add(this.btnConsul);
-            this.Sidebar.Controls.Add(this.btnHorario);
-            this.Sidebar.Controls.Add(this.btnPermanente);
+            this.Sidebar.Controls.Add(this.btnCompras);
+            this.Sidebar.Controls.Add(this.btnventa);
+            this.Sidebar.Controls.Add(this.btnCategoria);
+            this.Sidebar.Controls.Add(this.btnProducto);
             this.Sidebar.Controls.Add(this.btnProveedor);
             this.Sidebar.Controls.Add(this.btncliente);
             this.Sidebar.Controls.Add(this.label2);
@@ -166,68 +167,72 @@
             this.Sidebar.TabIndex = 2;
             this.Sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.Sidebar_Paint);
             // 
-            // button1
+            // btnCompras
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 626);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(270, 45);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Compra";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompras.ForeColor = System.Drawing.Color.White;
+            this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(0, 626);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(270, 45);
+            this.btnCompras.TabIndex = 9;
+            this.btnCompras.Text = "Compra";
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
-            // btnConsul
+            // btnventa
             // 
-            this.btnConsul.FlatAppearance.BorderSize = 0;
-            this.btnConsul.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnConsul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsul.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsul.ForeColor = System.Drawing.Color.White;
-            this.btnConsul.Image = ((System.Drawing.Image)(resources.GetObject("btnConsul.Image")));
-            this.btnConsul.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsul.Location = new System.Drawing.Point(0, 547);
-            this.btnConsul.Name = "btnConsul";
-            this.btnConsul.Size = new System.Drawing.Size(267, 54);
-            this.btnConsul.TabIndex = 8;
-            this.btnConsul.Text = "Venta";
-            this.btnConsul.UseVisualStyleBackColor = true;
+            this.btnventa.FlatAppearance.BorderSize = 0;
+            this.btnventa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnventa.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnventa.ForeColor = System.Drawing.Color.White;
+            this.btnventa.Image = ((System.Drawing.Image)(resources.GetObject("btnventa.Image")));
+            this.btnventa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnventa.Location = new System.Drawing.Point(0, 547);
+            this.btnventa.Name = "btnventa";
+            this.btnventa.Size = new System.Drawing.Size(267, 54);
+            this.btnventa.TabIndex = 8;
+            this.btnventa.Text = "Venta";
+            this.btnventa.UseVisualStyleBackColor = true;
+            this.btnventa.Click += new System.EventHandler(this.btnventa_Click);
             // 
-            // btnHorario
+            // btnCategoria
             // 
-            this.btnHorario.FlatAppearance.BorderSize = 0;
-            this.btnHorario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorario.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario.ForeColor = System.Drawing.Color.White;
-            this.btnHorario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorario.Location = new System.Drawing.Point(0, 469);
-            this.btnHorario.Name = "btnHorario";
-            this.btnHorario.Size = new System.Drawing.Size(267, 53);
-            this.btnHorario.TabIndex = 7;
-            this.btnHorario.Text = "  Categoria";
-            this.btnHorario.UseVisualStyleBackColor = true;
+            this.btnCategoria.FlatAppearance.BorderSize = 0;
+            this.btnCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoria.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategoria.Location = new System.Drawing.Point(0, 469);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.Size = new System.Drawing.Size(267, 53);
+            this.btnCategoria.TabIndex = 7;
+            this.btnCategoria.Text = "  Categoria";
+            this.btnCategoria.UseVisualStyleBackColor = true;
+            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
-            // btnPermanente
+            // btnProducto
             // 
-            this.btnPermanente.FlatAppearance.BorderSize = 0;
-            this.btnPermanente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnPermanente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPermanente.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPermanente.ForeColor = System.Drawing.Color.White;
-            this.btnPermanente.Image = ((System.Drawing.Image)(resources.GetObject("btnPermanente.Image")));
-            this.btnPermanente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPermanente.Location = new System.Drawing.Point(0, 395);
-            this.btnPermanente.Name = "btnPermanente";
-            this.btnPermanente.Size = new System.Drawing.Size(267, 52);
-            this.btnPermanente.TabIndex = 6;
-            this.btnPermanente.Text = "Producto";
-            this.btnPermanente.UseVisualStyleBackColor = true;
+            this.btnProducto.FlatAppearance.BorderSize = 0;
+            this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducto.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducto.ForeColor = System.Drawing.Color.White;
+            this.btnProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnProducto.Image")));
+            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducto.Location = new System.Drawing.Point(0, 395);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(267, 52);
+            this.btnProducto.TabIndex = 6;
+            this.btnProducto.Text = "Producto";
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // btnProveedor
             // 
@@ -308,6 +313,7 @@
             this.panelContenedor.Padding = new System.Windows.Forms.Padding(14);
             this.panelContenedor.Size = new System.Drawing.Size(1116, 728);
             this.panelContenedor.TabIndex = 3;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // FormPrincipal
             // 
@@ -348,10 +354,10 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnConsul;
-        private System.Windows.Forms.Button btnHorario;
-        private System.Windows.Forms.Button btnPermanente;
+        private System.Windows.Forms.Button btnCompras;
+        private System.Windows.Forms.Button btnventa;
+        private System.Windows.Forms.Button btnCategoria;
+        private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Button btncliente;
         private System.Windows.Forms.PictureBox btnMaximizar;

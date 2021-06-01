@@ -82,11 +82,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Catalogos\Categoria.cs">
+    <Compile Include="Catalogos\FormCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catalogos\Categoria.Designer.cs">
-      <DependentUpon>Categoria.cs</DependentUpon>
+    <Compile Include="Catalogos\FormCategoria.Designer.cs">
+      <DependentUpon>FormCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\FormCliente.cs">
       <SubType>Form</SubType>
@@ -106,17 +106,17 @@
     <Compile Include="Catalogos\FacturaVenta.Designer.cs">
       <DependentUpon>FacturaVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\Producto.cs">
+    <Compile Include="Catalogos\FormProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catalogos\Producto.Designer.cs">
-      <DependentUpon>Producto.cs</DependentUpon>
+    <Compile Include="Catalogos\FormProducto.Designer.cs">
+      <DependentUpon>FormProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\Proveedores.cs">
+    <Compile Include="Catalogos\FormProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catalogos\Proveedores.Designer.cs">
-      <DependentUpon>Proveedores.cs</DependentUpon>
+    <Compile Include="Catalogos\FormProveedores.Designer.cs">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1Principal.cs">
       <SubType>Form</SubType>
@@ -138,11 +138,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Catalogos\FacturaCompra.resx">
+      <DependentUpon>FacturaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FacturaVenta.resx">
+      <DependentUpon>FacturaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FormCategoria.resx">
+      <DependentUpon>FormCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\Proveedores.resx">
-      <DependentUpon>Proveedores.cs</DependentUpon>
+    <EmbeddedResource Include="Catalogos\FormProducto.resx">
+      <DependentUpon>FormProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FormProveedores.resx">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Principal.resx">
       <DependentUpon>Form1Principal.cs</DependentUpon>

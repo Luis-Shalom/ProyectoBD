@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoBD.Catalogos
 {
-    public partial class Producto : Form
+    public partial class FormProducto : Form
     {
-        public Producto()
+        public FormProducto()
         {
             InitializeComponent();
         }

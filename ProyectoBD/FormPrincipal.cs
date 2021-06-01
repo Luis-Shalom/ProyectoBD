@@ -60,8 +60,11 @@ namespace ProyectoBD
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            MessageBox.Show("CERRANDO");
+            
+                Application.Exit();
+                MessageBox.Show("CERRANDO");
+            
+            
 
         }
 
@@ -86,26 +89,71 @@ namespace ProyectoBD
 
         private void btnArea_Click(object sender, EventArgs e)
         {
-            AbrirFormHijos(new Proveedor());
+            AbrirFormHijos(new Proveedores());
               
         }
+        private Form formActivado = null;
         //https://www.youtube.com/watch?v=Z7TfV7LZzp4
-        private void AbrirFormHijos( object formhijo)
+        private void AbrirFormHijos( Form formhijo)
         {
-            if (this.panelContenedor.Controls.Count > 0)
+            //if (this.panelContenedor.Controls.Count > 0)
             
-                this.panelContenedor.Controls.RemoveAt(0);
+            //    this.panelContenedor.Controls.RemoveAt(0);
 
-                Form fh = formhijo as Form;
+            //    Form fh = formhijo as Form;
 
-                fh.TopLevel = true;
-                fh.Dock = DockStyle.Fill;
-                this.panelContenedor.Controls.Add(fh);
-                this.panelContenedor.Tag = fh;
-                fh.Show();
+            //    fh.TopLevel = false;
+            //    fh.Dock = DockStyle.Fill;
+            //    this.panelContenedor.Controls.Add(fh);
+            //    this.panelContenedor.Tag = fh;
+            //    fh.Show();
+            if (formActivado != null)
+                formActivado.Close();
+            formActivado = formhijo;
+            formhijo.TopLevel = false;
+            formhijo.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(formhijo);
+            panelContenedor.BringToFront();
+            formhijo.Show();
+
 
 
             
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijos(new FormProducto());
+        }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijos(new FormCategoria());
+        }
+
+        private void btnventa_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijos(new FacturaVenta());
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijos(new FacturaCompra());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Header_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

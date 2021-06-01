@@ -16,5 +16,10 @@ namespace ProyectoBD.Catalogos
         {
             InitializeComponent();
         }
+
+        private void materialLabel12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
