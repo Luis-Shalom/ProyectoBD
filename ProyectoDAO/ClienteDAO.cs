@@ -49,6 +49,11 @@ namespace ProyectoDAO
         }
 
 
+        public List<Cliente> listar()
+        {
+            return (db.Clientes.ToList());
+        }
+
 
 
 

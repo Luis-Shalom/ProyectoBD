@@ -39,17 +39,15 @@
             this.multilineDir = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.btnguardar = new MaterialSkin.Controls.MaterialButton();
-            this.btnEditC = new MaterialSkin.Controls.MaterialButton();
+            this.btnEditClient = new MaterialSkin.Controls.MaterialButton();
             this.btncanceC = new MaterialSkin.Controls.MaterialButton();
-            this.btnelimiC = new MaterialSkin.Controls.MaterialButton();
+            this.btnelimi = new MaterialSkin.Controls.MaterialButton();
             this.btnsalirC = new MaterialSkin.Controls.MaterialButton();
             this.txtnombre = new MaterialSkin.Controls.MaterialTextBox();
             this.txtapellido = new MaterialSkin.Controls.MaterialTextBox();
             this.txttelef = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
             this.txtedad = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtid = new MaterialSkin.Controls.MaterialTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -164,6 +162,7 @@
             this.txtCodig.Size = new System.Drawing.Size(203, 50);
             this.txtCodig.TabIndex = 8;
             this.txtCodig.Text = "";
+            this.txtCodig.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodig_Validating);
             // 
             // multilineDir
             // 
@@ -215,23 +214,24 @@
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
-            // btnEditC
+            // btnEditClient
             // 
-            this.btnEditC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEditC.Depth = 0;
-            this.btnEditC.DrawShadows = true;
-            this.btnEditC.HighEmphasis = true;
-            this.btnEditC.Icon = null;
-            this.btnEditC.Location = new System.Drawing.Point(479, 473);
-            this.btnEditC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnEditC.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEditC.Name = "btnEditC";
-            this.btnEditC.Size = new System.Drawing.Size(71, 36);
-            this.btnEditC.TabIndex = 9;
-            this.btnEditC.Text = "Editar";
-            this.btnEditC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnEditC.UseAccentColor = false;
-            this.btnEditC.UseVisualStyleBackColor = true;
+            this.btnEditClient.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEditClient.Depth = 0;
+            this.btnEditClient.DrawShadows = true;
+            this.btnEditClient.HighEmphasis = true;
+            this.btnEditClient.Icon = null;
+            this.btnEditClient.Location = new System.Drawing.Point(479, 473);
+            this.btnEditClient.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEditClient.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEditClient.Name = "btnEditClient";
+            this.btnEditClient.Size = new System.Drawing.Size(71, 36);
+            this.btnEditClient.TabIndex = 9;
+            this.btnEditClient.Text = "Editar";
+            this.btnEditClient.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEditClient.UseAccentColor = false;
+            this.btnEditClient.UseVisualStyleBackColor = true;
+            this.btnEditClient.Click += new System.EventHandler(this.btnEditClient_Click);
             // 
             // btncanceC
             // 
@@ -251,23 +251,24 @@
             this.btncanceC.UseAccentColor = false;
             this.btncanceC.UseVisualStyleBackColor = true;
             // 
-            // btnelimiC
+            // btnelimi
             // 
-            this.btnelimiC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnelimiC.Depth = 0;
-            this.btnelimiC.DrawShadows = true;
-            this.btnelimiC.HighEmphasis = true;
-            this.btnelimiC.Icon = null;
-            this.btnelimiC.Location = new System.Drawing.Point(578, 473);
-            this.btnelimiC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnelimiC.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnelimiC.Name = "btnelimiC";
-            this.btnelimiC.Size = new System.Drawing.Size(88, 36);
-            this.btnelimiC.TabIndex = 12;
-            this.btnelimiC.Text = "eliminar";
-            this.btnelimiC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnelimiC.UseAccentColor = false;
-            this.btnelimiC.UseVisualStyleBackColor = true;
+            this.btnelimi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnelimi.Depth = 0;
+            this.btnelimi.DrawShadows = true;
+            this.btnelimi.HighEmphasis = true;
+            this.btnelimi.Icon = null;
+            this.btnelimi.Location = new System.Drawing.Point(578, 473);
+            this.btnelimi.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnelimi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnelimi.Name = "btnelimi";
+            this.btnelimi.Size = new System.Drawing.Size(88, 36);
+            this.btnelimi.TabIndex = 12;
+            this.btnelimi.Text = "eliminar";
+            this.btnelimi.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnelimi.UseAccentColor = false;
+            this.btnelimi.UseVisualStyleBackColor = true;
+            this.btnelimi.Click += new System.EventHandler(this.btnelimi_Click);
             // 
             // btnsalirC
             // 
@@ -356,33 +357,6 @@
             this.txtedad.TabIndex = 18;
             this.txtedad.Text = "";
             // 
-            // materialLabel19
-            // 
-            this.materialLabel19.AutoSize = true;
-            this.materialLabel19.BackColor = System.Drawing.Color.White;
-            this.materialLabel19.Depth = 0;
-            this.materialLabel19.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel19.Location = new System.Drawing.Point(7, 14);
-            this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel19.Name = "materialLabel19";
-            this.materialLabel19.Size = new System.Drawing.Size(22, 19);
-            this.materialLabel19.TabIndex = 19;
-            this.materialLabel19.Text = "Id: ";
-            // 
-            // txtid
-            // 
-            this.txtid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtid.Depth = 0;
-            this.txtid.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtid.Location = new System.Drawing.Point(35, 0);
-            this.txtid.MaxLength = 50;
-            this.txtid.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtid.Multiline = false;
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(72, 50);
-            this.txtid.TabIndex = 20;
-            this.txtid.Text = "";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -395,17 +369,15 @@
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard2.Controls.Add(this.dataGridView1);
-            this.materialCard2.Controls.Add(this.txtid);
-            this.materialCard2.Controls.Add(this.materialLabel19);
             this.materialCard2.Controls.Add(this.txtedad);
             this.materialCard2.Controls.Add(this.materialLabel18);
             this.materialCard2.Controls.Add(this.txttelef);
             this.materialCard2.Controls.Add(this.txtapellido);
             this.materialCard2.Controls.Add(this.txtnombre);
             this.materialCard2.Controls.Add(this.btnsalirC);
-            this.materialCard2.Controls.Add(this.btnelimiC);
+            this.materialCard2.Controls.Add(this.btnelimi);
             this.materialCard2.Controls.Add(this.btncanceC);
-            this.materialCard2.Controls.Add(this.btnEditC);
+            this.materialCard2.Controls.Add(this.btnEditClient);
             this.materialCard2.Controls.Add(this.btnguardar);
             this.materialCard2.Controls.Add(this.materialLabel1);
             this.materialCard2.Controls.Add(this.multilineDir);
@@ -458,17 +430,15 @@
         private MaterialSkin.Controls.MaterialMultiLineTextBox multilineDir;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton btnguardar;
-        public MaterialSkin.Controls.MaterialButton btnEditC;
+        public MaterialSkin.Controls.MaterialButton btnEditClient;
         private MaterialSkin.Controls.MaterialButton btncanceC;
-        private MaterialSkin.Controls.MaterialButton btnelimiC;
+        private MaterialSkin.Controls.MaterialButton btnelimi;
         private MaterialSkin.Controls.MaterialButton btnsalirC;
         private MaterialSkin.Controls.MaterialTextBox txtnombre;
         private MaterialSkin.Controls.MaterialTextBox txtapellido;
         private MaterialSkin.Controls.MaterialTextBox txttelef;
         private MaterialSkin.Controls.MaterialLabel materialLabel18;
         private MaterialSkin.Controls.MaterialTextBox txtedad;
-        private MaterialSkin.Controls.MaterialLabel materialLabel19;
-        private MaterialSkin.Controls.MaterialTextBox txtid;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
     }
