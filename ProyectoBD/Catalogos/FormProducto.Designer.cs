@@ -34,10 +34,8 @@
             this.txtprecio = new MaterialSkin.Controls.MaterialTextBox();
             this.txtCat = new MaterialSkin.Controls.MaterialTextBox();
             this.txtnom = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton9 = new MaterialSkin.Controls.MaterialButton();
             this.btnGP = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.materialMultiLineDes = new MaterialSkin.Controls.MaterialMultiLineTextBox();
@@ -58,10 +56,8 @@
             this.materialCard3.Controls.Add(this.txtprecio);
             this.materialCard3.Controls.Add(this.txtCat);
             this.materialCard3.Controls.Add(this.txtnom);
-            this.materialCard3.Controls.Add(this.materialButton6);
             this.materialCard3.Controls.Add(this.materialButton7);
             this.materialCard3.Controls.Add(this.materialButton8);
-            this.materialCard3.Controls.Add(this.materialButton9);
             this.materialCard3.Controls.Add(this.btnGP);
             this.materialCard3.Controls.Add(this.materialLabel7);
             this.materialCard3.Controls.Add(this.materialMultiLineDes);
@@ -141,24 +137,6 @@
             this.txtnom.TabIndex = 14;
             this.txtnom.Text = "";
             // 
-            // materialButton6
-            // 
-            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton6.Depth = 0;
-            this.materialButton6.DrawShadows = true;
-            this.materialButton6.HighEmphasis = true;
-            this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(820, 444);
-            this.materialButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton6.Name = "materialButton6";
-            this.materialButton6.Size = new System.Drawing.Size(61, 36);
-            this.materialButton6.TabIndex = 13;
-            this.materialButton6.Text = "Salir";
-            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton6.UseAccentColor = false;
-            this.materialButton6.UseVisualStyleBackColor = true;
-            // 
             // materialButton7
             // 
             this.materialButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -188,30 +166,12 @@
             this.materialButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton8.Name = "materialButton8";
-            this.materialButton8.Size = new System.Drawing.Size(96, 36);
+            this.materialButton8.Size = new System.Drawing.Size(94, 36);
             this.materialButton8.TabIndex = 11;
-            this.materialButton8.Text = "Cancelar";
+            this.materialButton8.Text = "terminar";
             this.materialButton8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton8.UseAccentColor = false;
             this.materialButton8.UseVisualStyleBackColor = true;
-            // 
-            // materialButton9
-            // 
-            this.materialButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton9.Depth = 0;
-            this.materialButton9.DrawShadows = true;
-            this.materialButton9.HighEmphasis = true;
-            this.materialButton9.Icon = null;
-            this.materialButton9.Location = new System.Drawing.Point(470, 444);
-            this.materialButton9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton9.Name = "materialButton9";
-            this.materialButton9.Size = new System.Drawing.Size(71, 36);
-            this.materialButton9.TabIndex = 9;
-            this.materialButton9.Text = "Editar";
-            this.materialButton9.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton9.UseAccentColor = false;
-            this.materialButton9.UseVisualStyleBackColor = true;
             // 
             // btnGP
             // 
@@ -223,7 +183,7 @@
             this.btnGP.DrawShadows = true;
             this.btnGP.HighEmphasis = true;
             this.btnGP.Icon = null;
-            this.btnGP.Location = new System.Drawing.Point(356, 444);
+            this.btnGP.Location = new System.Drawing.Point(435, 444);
             this.btnGP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnGP.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGP.Name = "btnGP";
@@ -353,10 +313,8 @@
         private MaterialSkin.Controls.MaterialTextBox txtprecio;
         private MaterialSkin.Controls.MaterialTextBox txtCat;
         private MaterialSkin.Controls.MaterialTextBox txtnom;
-        private MaterialSkin.Controls.MaterialButton materialButton6;
         private MaterialSkin.Controls.MaterialButton materialButton7;
         private MaterialSkin.Controls.MaterialButton materialButton8;
-        public MaterialSkin.Controls.MaterialButton materialButton9;
         private MaterialSkin.Controls.MaterialButton btnGP;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineDes;

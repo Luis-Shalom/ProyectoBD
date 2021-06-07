@@ -34,16 +34,16 @@ namespace ProyectoBD.Catalogos
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.txtnombre = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton9 = new MaterialSkin.Controls.MaterialButton();
             this.btnGP = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.materialMultiLineDesc = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.txtcodi = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialCard3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -54,10 +54,8 @@ namespace ProyectoBD.Catalogos
             this.materialCard3.Controls.Add(this.dataGridView1);
             this.materialCard3.Controls.Add(this.materialDivider1);
             this.materialCard3.Controls.Add(this.txtnombre);
-            this.materialCard3.Controls.Add(this.materialButton6);
             this.materialCard3.Controls.Add(this.materialButton7);
             this.materialCard3.Controls.Add(this.materialButton8);
-            this.materialCard3.Controls.Add(this.materialButton9);
             this.materialCard3.Controls.Add(this.btnGP);
             this.materialCard3.Controls.Add(this.materialLabel7);
             this.materialCard3.Controls.Add(this.materialMultiLineDesc);
@@ -83,10 +81,13 @@ namespace ProyectoBD.Catalogos
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -96,7 +97,7 @@ namespace ProyectoBD.Catalogos
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(463, 198);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 198);
             this.dataGridView1.TabIndex = 18;
             // 
             // materialDivider1
@@ -124,24 +125,6 @@ namespace ProyectoBD.Catalogos
             this.txtnombre.TabIndex = 14;
             this.txtnombre.Text = "";
             // 
-            // materialButton6
-            // 
-            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton6.Depth = 0;
-            this.materialButton6.DrawShadows = true;
-            this.materialButton6.HighEmphasis = true;
-            this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(679, 539);
-            this.materialButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton6.Name = "materialButton6";
-            this.materialButton6.Size = new System.Drawing.Size(61, 36);
-            this.materialButton6.TabIndex = 13;
-            this.materialButton6.Text = "Salir";
-            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton6.UseAccentColor = false;
-            this.materialButton6.UseVisualStyleBackColor = true;
-            // 
             // materialButton7
             // 
             this.materialButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -149,7 +132,7 @@ namespace ProyectoBD.Catalogos
             this.materialButton7.DrawShadows = true;
             this.materialButton7.HighEmphasis = true;
             this.materialButton7.Icon = null;
-            this.materialButton7.Location = new System.Drawing.Point(428, 539);
+            this.materialButton7.Location = new System.Drawing.Point(418, 539);
             this.materialButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton7.Name = "materialButton7";
@@ -171,30 +154,12 @@ namespace ProyectoBD.Catalogos
             this.materialButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton8.Name = "materialButton8";
-            this.materialButton8.Size = new System.Drawing.Size(96, 36);
+            this.materialButton8.Size = new System.Drawing.Size(94, 36);
             this.materialButton8.TabIndex = 11;
-            this.materialButton8.Text = "Cancelar";
+            this.materialButton8.Text = "Terminar";
             this.materialButton8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton8.UseAccentColor = false;
             this.materialButton8.UseVisualStyleBackColor = true;
-            // 
-            // materialButton9
-            // 
-            this.materialButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton9.Depth = 0;
-            this.materialButton9.DrawShadows = true;
-            this.materialButton9.HighEmphasis = true;
-            this.materialButton9.Icon = null;
-            this.materialButton9.Location = new System.Drawing.Point(329, 539);
-            this.materialButton9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton9.Name = "materialButton9";
-            this.materialButton9.Size = new System.Drawing.Size(71, 36);
-            this.materialButton9.TabIndex = 9;
-            this.materialButton9.Text = "Editar";
-            this.materialButton9.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton9.UseAccentColor = false;
-            this.materialButton9.UseVisualStyleBackColor = true;
             // 
             // btnGP
             // 
@@ -206,7 +171,7 @@ namespace ProyectoBD.Catalogos
             this.btnGP.DrawShadows = true;
             this.btnGP.HighEmphasis = true;
             this.btnGP.Icon = null;
-            this.btnGP.Location = new System.Drawing.Point(215, 539);
+            this.btnGP.Location = new System.Drawing.Point(289, 539);
             this.btnGP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnGP.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGP.Name = "btnGP";
@@ -285,6 +250,18 @@ namespace ProyectoBD.Catalogos
             this.materialLabel9.TabIndex = 1;
             this.materialLabel9.Text = "Nombre: ";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // FormCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,15 +285,15 @@ namespace ProyectoBD.Catalogos
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialTextBox txtnombre;
-        private MaterialSkin.Controls.MaterialButton materialButton6;
         private MaterialSkin.Controls.MaterialButton materialButton7;
         private MaterialSkin.Controls.MaterialButton materialButton8;
-        public MaterialSkin.Controls.MaterialButton materialButton9;
         private MaterialSkin.Controls.MaterialButton btnGP;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineDesc;
         private MaterialSkin.Controls.MaterialTextBox txtcodi;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProyectoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ProyectoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="IdCategoria" />
           </Key>
-          <Property Name="IdCategoria" Type="int" Nullable="false" />
+          <Property Name="IdCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Codigo" Type="varchar" MaxLength="50" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
           <Property Name="Descripcion" Type="varchar" MaxLength="60" />
@@ -18,11 +18,11 @@
           <Key>
             <PropertyRef Name="IdCliente" />
           </Key>
-          <Property Name="IdCliente" Type="int" Nullable="false" />
-          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="3" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
           <Property Name="Apellido" Type="varchar" MaxLength="50" />
-          <Property Name="Sexo" Type="char" MaxLength="10" />
+          <Property Name="Sexo" Type="varchar" MaxLength="50" />
           <Property Name="Edad" Type="int" />
           <Property Name="Telefono" Type="varchar" MaxLength="50" />
           <Property Name="Direccion" Type="varchar" MaxLength="50" />
@@ -31,7 +31,7 @@
           <Key>
             <PropertyRef Name="IdCompras" />
           </Key>
-          <Property Name="IdCompras" Type="int" Nullable="false" />
+          <Property Name="IdCompras" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Codigo" Type="varchar" MaxLength="50" />
           <Property Name="Fecha" Type="date" />
           <Property Name="Monto_a_Credito" Type="decimal" Precision="18" Scale="0" />
@@ -42,7 +42,7 @@
           <Key>
             <PropertyRef Name="IdDetalle_Compra" />
           </Key>
-          <Property Name="IdDetalle_Compra" Type="int" Nullable="false" />
+          <Property Name="IdDetalle_Compra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Cantidad" Type="int" />
           <Property Name="IdProducto" Type="int" Nullable="false" />
           <Property Name="IdCompras" Type="int" Nullable="false" />
@@ -52,7 +52,7 @@
           <Key>
             <PropertyRef Name="IdDetalle_Venta" />
           </Key>
-          <Property Name="IdDetalle_Venta" Type="int" Nullable="false" />
+          <Property Name="IdDetalle_Venta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Precio_venta" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Cantidad" Type="int" />
           <Property Name="IdProducto" Type="int" Nullable="false" />
@@ -62,7 +62,7 @@
           <Key>
             <PropertyRef Name="IdProducto" />
           </Key>
-          <Property Name="IdProducto" Type="int" Nullable="false" />
+          <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Precio" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Descripcion" Type="varchar" MaxLength="60" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
@@ -73,7 +73,7 @@
           <Key>
             <PropertyRef Name="IdProveedor" />
           </Key>
-          <Property Name="IdProveedor" Type="int" Nullable="false" />
+          <Property Name="IdProveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Codigo" Type="varchar" MaxLength="50" />
           <Property Name="Razon_Social" Type="varchar" MaxLength="50" />
           <Property Name="Telefono" Type="varchar" MaxLength="20" />
@@ -95,28 +95,28 @@
           <Key>
             <PropertyRef Name="IdTipo_Venta" />
           </Key>
-          <Property Name="IdTipo_Venta" Type="int" Nullable="false" />
+          <Property Name="IdTipo_Venta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Descripcion" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TipoPagoComp">
           <Key>
             <PropertyRef Name="IdTipoPago" />
           </Key>
-          <Property Name="IdTipoPago" Type="int" Nullable="false" />
+          <Property Name="IdTipoPago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Tipo_Pago" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TipoPagoVenta">
           <Key>
             <PropertyRef Name="IdTipoVenta" />
           </Key>
-          <Property Name="IdTipoVenta" Type="int" Nullable="false" />
+          <Property Name="IdTipoVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TipoPago" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
             <PropertyRef Name="IdVenta" />
           </Key>
-          <Property Name="IdVenta" Type="int" Nullable="false" />
+          <Property Name="IdVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Codigo" Type="varchar" MaxLength="50" />
           <Property Name="Fecha" Type="date" />
           <Property Name="IdCliente" Type="int" Nullable="false" />
@@ -297,8 +297,7 @@
             <End Role="DetalleVenta" EntitySet="DetalleVenta" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProyectoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -317,10 +316,10 @@
             <PropertyRef Name="IdCliente" />
           </Key>
           <Property Name="IdCliente" Type="Int32" Nullable="false" />
-          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Codigo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Sexo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Edad" Type="Int32" />
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />

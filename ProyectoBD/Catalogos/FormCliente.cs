@@ -38,8 +38,7 @@ namespace ProyectoBD.Catalogos
             txtnombre.Enabled = !EstadoCtrl;
             txtapellido.Enabled = !EstadoCtrl;
             //oCliente.TipoDeClienteId = (int)cboTipo.SelectedValue;
-            CheckboxF.Enabled = !EstadoCtrl;
-            CheckboxM.Enabled = !EstadoCtrl;
+            cbxSexo.Enabled = !EstadoCtrl;
             txttelef.Enabled = !EstadoCtrl;
             txtedad.Enabled = !EstadoCtrl;
             //txtid.Enabled = !EstadoCtrl;
@@ -54,8 +53,7 @@ namespace ProyectoBD.Catalogos
             txtCodig.Text = "";
             txtnombre.Text = "";
             txtapellido.Text = "";
-            CheckboxF.Text = "";
-            CheckboxM.Text = "";
+         
             txttelef.Text = "";
             txtedad.Text = "";
             //txtid.Text = "";
@@ -73,19 +71,21 @@ namespace ProyectoBD.Catalogos
 
             if (NuevoRegistro == true)
             {
+
+
                 Cliente oCliente = new Cliente();
                 oCliente.Codigo = txtCodig.Text.Trim();
                 oCliente.Nombre = txtnombre.Text.Trim();
                 oCliente.Apellido = txtapellido.Text.Trim();
                 //oCliente.TipoDeClienteId = (int)cboTipo.SelectedValue;
-                oCliente.Sexo = CheckboxF.Text.Trim();
-                 oCliente.Sexo = CheckboxM.Text.Trim();
+                oCliente.Sexo = cbxSexo.Text.Trim();
+             //   oCliente.Sexo = CheckboxM.Text.Trim();
                 oCliente.Telefono = txttelef.Text.Trim();
                 oCliente.Edad = (int.Parse(txtedad.Text.Trim()));
                 //oCliente.IdCliente = (int.Parse(txtid.Text.Trim()));
                 oCliente.Direccion = multilineDir.Text.Trim();
 
-
+              
 
 
                 if (oclienteDAO.Agregar(oCliente) == false)
@@ -105,10 +105,14 @@ namespace ProyectoBD.Catalogos
             {
                 Cliente oCliente = oclienteDAO.Buscar(txtCodig.Text.Trim());
 
+
+           
+
                 oCliente.Nombre = txtnombre.Text.Trim();
                 oCliente.Apellido = txtapellido.Text.Trim();
-                oCliente.Sexo = CheckboxF.Text.Trim();
-                oCliente.Sexo = CheckboxM.Text.Trim();
+                //oCliente.Sexo = CheckboxF.Text.Trim();
+                //oCliente.Sexo = CheckboxM.Text.Trim();
+                oCliente.Sexo = cbxSexo.Text.Trim();
                 oCliente.Telefono = txttelef.Text.Trim();
                 oCliente.Direccion = multilineDir.Text.Trim();
                 oCliente.Edad = (int.Parse(txtedad.Text.Trim()));
@@ -126,6 +130,9 @@ namespace ProyectoBD.Catalogos
                 {
                     MessageBox.Show("Registro Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargar();
+
+                  
+
                     // return;
                 }
 
@@ -189,21 +196,24 @@ namespace ProyectoBD.Catalogos
                 NuevoRegistro = false;
                 txtnombre.Text = oCliente.Nombre.Trim();
                 txtapellido.Text = oCliente.Apellido.Trim();
-                CheckboxF.Text = oCliente.Sexo.Trim();
-                CheckboxM.Text = oCliente.Sexo.Trim();
+                //CheckboxF.Text = oCliente.Sexo.Trim();
+                //CheckboxM.Text = oCliente.Sexo.Trim();
+                oCliente.Sexo = cbxSexo.Text.Trim();
                 txttelef.Text = oCliente.Telefono.Trim();
                 multilineDir.Text = oCliente.Direccion.Trim();
                 txtedad.Text= oCliente.Edad.ToString();
 
                // DesactivaControles(false);
-              btnguardar.Enabled = true;
+                btnguardar.Enabled = true;
                 btnelimi.Enabled = true;
-               
+             
                 //cboTipo.SelectedValue = oCliente.TipoDeClienteId;
                 //DesactivaControles(false);
             }
+          
             else
             {
+                //LimpiarControles();
                 NuevoRegistro = true;
                 //DesactivaControles(false);
                 btnguardar.Enabled = true;
@@ -230,8 +240,7 @@ namespace ProyectoBD.Catalogos
                 txtCodig.Text = "";
                 txtnombre.Text = "";
                 txtapellido.Text = "";
-                CheckboxF.Text = "";
-                CheckboxM.Text = "";
+              
                 multilineDir.Text = "";
                 txttelef.Text = "";
                 txtedad.Text = "";
