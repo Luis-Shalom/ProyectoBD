@@ -28,7 +28,7 @@ namespace ProyectoBD.Catalogos
                 var lst = from d in contexto.Clientes
                           select d;
 
-            //    dataGridView1.DataSource = lst.ToList();
+               dataGridView1.DataSource = lst.ToList();
             }
 
         }
@@ -140,8 +140,8 @@ namespace ProyectoBD.Catalogos
             }
             LimpiarControles();
             //DesactivaControles(true);
-            txtCodig.Text = "";
-            txtCodig.Focus();
+           txtCodig.Text = "";
+           txtCodig.Focus();
 
         }
 
@@ -198,7 +198,8 @@ namespace ProyectoBD.Catalogos
                 txtapellido.Text = oCliente.Apellido.Trim();
                 //CheckboxF.Text = oCliente.Sexo.Trim();
                 //CheckboxM.Text = oCliente.Sexo.Trim();
-                oCliente.Sexo = cbxSexo.Text.Trim();
+                cbxSexo.Text = oCliente.Sexo.Trim();
+             //   txt.Sexo = cbxSexo.Text.Trim();
                 txttelef.Text = oCliente.Telefono.Trim();
                 multilineDir.Text = oCliente.Direccion.Trim();
                 txtedad.Text= oCliente.Edad.ToString();

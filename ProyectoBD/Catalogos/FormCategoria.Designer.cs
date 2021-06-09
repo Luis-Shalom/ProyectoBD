@@ -29,7 +29,14 @@ namespace ProyectoBD.Catalogos
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategoria));
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnelimi = new MaterialSkin.Controls.MaterialButton();
+            this.btncanceC = new MaterialSkin.Controls.MaterialButton();
+            this.btnguardar = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtnombre = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
@@ -39,18 +46,15 @@ namespace ProyectoBD.Catalogos
             this.txtcodi = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnelimi = new MaterialSkin.Controls.MaterialButton();
-            this.btncanceC = new MaterialSkin.Controls.MaterialButton();
-            this.btnguardar = new MaterialSkin.Controls.MaterialButton();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialCard3
             // 
             this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.pictureBox1);
             this.materialCard3.Controls.Add(this.materialTextBox1);
             this.materialCard3.Controls.Add(this.btnelimi);
             this.materialCard3.Controls.Add(this.btncanceC);
@@ -75,6 +79,103 @@ namespace ProyectoBD.Catalogos
             this.materialCard3.Size = new System.Drawing.Size(1044, 540);
             this.materialCard3.TabIndex = 14;
             this.materialCard3.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard3_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(31, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
+            // materialTextBox1
+            // 
+            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox1.Depth = 0;
+            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 12F);
+            this.materialTextBox1.Location = new System.Drawing.Point(79, 17);
+            this.materialTextBox1.MaxLength = 3;
+            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox1.Multiline = false;
+            this.materialTextBox1.Name = "materialTextBox1";
+            this.materialTextBox1.Size = new System.Drawing.Size(399, 50);
+            this.materialTextBox1.TabIndex = 27;
+            this.materialTextBox1.Text = "";
+            // 
+            // btnelimi
+            // 
+            this.btnelimi.AutoSize = false;
+            this.btnelimi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnelimi.Depth = 0;
+            this.btnelimi.DrawShadows = true;
+            this.btnelimi.HighEmphasis = true;
+            this.btnelimi.Icon = ((System.Drawing.Image)(resources.GetObject("btnelimi.Icon")));
+            this.btnelimi.Location = new System.Drawing.Point(31, 471);
+            this.btnelimi.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnelimi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnelimi.Name = "btnelimi";
+            this.btnelimi.Size = new System.Drawing.Size(173, 36);
+            this.btnelimi.TabIndex = 26;
+            this.btnelimi.Text = "eliminar";
+            this.btnelimi.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnelimi.UseAccentColor = false;
+            this.btnelimi.UseVisualStyleBackColor = true;
+            this.btnelimi.Click += new System.EventHandler(this.btnelimi_Click);
+            // 
+            // btncanceC
+            // 
+            this.btncanceC.AutoSize = false;
+            this.btncanceC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btncanceC.BackColor = System.Drawing.Color.White;
+            this.btncanceC.Depth = 0;
+            this.btncanceC.DrawShadows = true;
+            this.btncanceC.HighEmphasis = true;
+            this.btncanceC.Icon = ((System.Drawing.Image)(resources.GetObject("btncanceC.Icon")));
+            this.btncanceC.Location = new System.Drawing.Point(305, 471);
+            this.btncanceC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btncanceC.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btncanceC.Name = "btncanceC";
+            this.btncanceC.Size = new System.Drawing.Size(173, 36);
+            this.btncanceC.TabIndex = 25;
+            this.btncanceC.Text = "Terminar";
+            this.btncanceC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btncanceC.UseAccentColor = false;
+            this.btncanceC.UseVisualStyleBackColor = false;
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnguardar.AutoSize = false;
+            this.btnguardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnguardar.Depth = 0;
+            this.btnguardar.DrawShadows = true;
+            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.HighEmphasis = true;
+            this.btnguardar.Icon = ((System.Drawing.Image)(resources.GetObject("btnguardar.Icon")));
+            this.btnguardar.Location = new System.Drawing.Point(610, 471);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnguardar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(340, 36);
+            this.btnguardar.TabIndex = 24;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnguardar.UseAccentColor = false;
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 107);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(447, 334);
+            this.dataGridView1.TabIndex = 21;
             // 
             // txtnombre
             // 
@@ -179,7 +280,7 @@ namespace ProyectoBD.Catalogos
             // 
             this.txtcodi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcodi.Depth = 0;
-            this.txtcodi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtcodi.Font = new System.Drawing.Font("Roboto", 12F);
             this.txtcodi.Location = new System.Drawing.Point(672, 107);
             this.txtcodi.MaxLength = 50;
             this.txtcodi.MouseState = MaterialSkin.MouseState.OUT;
@@ -188,6 +289,7 @@ namespace ProyectoBD.Catalogos
             this.txtcodi.Size = new System.Drawing.Size(203, 50);
             this.txtcodi.TabIndex = 8;
             this.txtcodi.Text = "";
+            this.txtcodi.Validating += new System.ComponentModel.CancelEventHandler(this.txtcodi_Validating);
             // 
             // materialLabel8
             // 
@@ -215,91 +317,6 @@ namespace ProyectoBD.Catalogos
             this.materialLabel9.TabIndex = 1;
             this.materialLabel9.Text = "Nombre: ";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(447, 334);
-            this.dataGridView1.TabIndex = 21;
-            // 
-            // btnelimi
-            // 
-            this.btnelimi.AutoSize = false;
-            this.btnelimi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnelimi.Depth = 0;
-            this.btnelimi.DrawShadows = true;
-            this.btnelimi.HighEmphasis = true;
-            this.btnelimi.Icon = null;
-            this.btnelimi.Location = new System.Drawing.Point(31, 471);
-            this.btnelimi.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnelimi.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnelimi.Name = "btnelimi";
-            this.btnelimi.Size = new System.Drawing.Size(173, 36);
-            this.btnelimi.TabIndex = 26;
-            this.btnelimi.Text = "eliminar";
-            this.btnelimi.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnelimi.UseAccentColor = false;
-            this.btnelimi.UseVisualStyleBackColor = true;
-            // 
-            // btncanceC
-            // 
-            this.btncanceC.AutoSize = false;
-            this.btncanceC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btncanceC.BackColor = System.Drawing.Color.White;
-            this.btncanceC.Depth = 0;
-            this.btncanceC.DrawShadows = true;
-            this.btncanceC.HighEmphasis = true;
-            this.btncanceC.Icon = null;
-            this.btncanceC.Location = new System.Drawing.Point(305, 471);
-            this.btncanceC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btncanceC.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btncanceC.Name = "btncanceC";
-            this.btncanceC.Size = new System.Drawing.Size(173, 36);
-            this.btncanceC.TabIndex = 25;
-            this.btncanceC.Text = "Terminar";
-            this.btncanceC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btncanceC.UseAccentColor = false;
-            this.btncanceC.UseVisualStyleBackColor = false;
-            // 
-            // btnguardar
-            // 
-            this.btnguardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnguardar.AutoSize = false;
-            this.btnguardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnguardar.Depth = 0;
-            this.btnguardar.DrawShadows = true;
-            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.HighEmphasis = true;
-            this.btnguardar.Icon = null;
-            this.btnguardar.Location = new System.Drawing.Point(610, 471);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnguardar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(340, 36);
-            this.btnguardar.TabIndex = 24;
-            this.btnguardar.Text = "Guardar";
-            this.btnguardar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnguardar.UseAccentColor = false;
-            this.btnguardar.UseVisualStyleBackColor = true;
-            // 
-            // materialTextBox1
-            // 
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.materialTextBox1.Location = new System.Drawing.Point(79, 17);
-            this.materialTextBox1.MaxLength = 3;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(399, 50);
-            this.materialTextBox1.TabIndex = 27;
-            this.materialTextBox1.Text = "";
-            // 
             // FormCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,6 +329,7 @@ namespace ProyectoBD.Catalogos
             this.Text = "FormCategoria";
             this.materialCard3.ResumeLayout(false);
             this.materialCard3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -334,5 +352,6 @@ namespace ProyectoBD.Catalogos
         private MaterialSkin.Controls.MaterialButton btncanceC;
         private MaterialSkin.Controls.MaterialButton btnguardar;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
