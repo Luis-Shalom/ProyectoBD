@@ -28,7 +28,7 @@ namespace ProyectoBD.Catalogos
                 var lst = from d in contexto.Clientes
                           select d;
 
-                dataGridView1.DataSource = lst.ToList();
+            //    dataGridView1.DataSource = lst.ToList();
             }
 
         }

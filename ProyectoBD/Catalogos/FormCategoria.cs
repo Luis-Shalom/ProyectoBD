@@ -16,5 +16,10 @@ namespace ProyectoBD.Catalogos
         {
             InitializeComponent();
         }
+
+        private void materialCard3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
