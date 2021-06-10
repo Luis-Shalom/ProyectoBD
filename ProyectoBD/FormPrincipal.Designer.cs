@@ -113,6 +113,7 @@
             this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
             this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategoria.Location = new System.Drawing.Point(0, 460);
             this.btnCategoria.Name = "btnCategoria";
