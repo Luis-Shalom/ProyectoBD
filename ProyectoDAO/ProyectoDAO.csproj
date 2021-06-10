@@ -55,6 +55,7 @@
     <Compile Include="ProductoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClienteDAO.cs" />
+    <Compile Include="ProveedoresDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProyectoEDM\ProyectoEDM.csproj">

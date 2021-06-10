@@ -28,7 +28,7 @@ namespace ProyectoBD.Catalogos
                 var lst = from d in contexto.Clientes
                           select d;
 
-               dataGridView1.DataSource = lst.ToList();
+              dataGridView1.DataSource = lst.ToList();
             }
 
         }
@@ -37,33 +37,22 @@ namespace ProyectoBD.Catalogos
             txtCodig.Enabled = !EstadoCtrl;
             txtnombre.Enabled = !EstadoCtrl;
             txtapellido.Enabled = !EstadoCtrl;
-            //oCliente.TipoDeClienteId = (int)cboTipo.SelectedValue;
             cbxSexo.Enabled = !EstadoCtrl;
             txttelef.Enabled = !EstadoCtrl;
             txtedad.Enabled = !EstadoCtrl;
-            //txtid.Enabled = !EstadoCtrl;
             multilineDir.Enabled = !EstadoCtrl;
         }//fin del método desactivar controles
         private void LimpiarControles()
         {
-            //txtNombres.Text = "";
-            //txtApellidos.Text = "";
-            //cboTipo.SelectedIndex = -1;
-
             txtCodig.Text = "";
             txtnombre.Text = "";
             txtapellido.Text = "";
-         
             txttelef.Text = "";
             txtedad.Text = "";
-            //txtid.Text = "";
             multilineDir.Text = "";
 
             //no hay nada seleccionado
         }
-       
-
-
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
@@ -71,22 +60,14 @@ namespace ProyectoBD.Catalogos
 
             if (NuevoRegistro == true)
             {
-
-
                 Cliente oCliente = new Cliente();
                 oCliente.Codigo = txtCodig.Text.Trim();
                 oCliente.Nombre = txtnombre.Text.Trim();
                 oCliente.Apellido = txtapellido.Text.Trim();
-                //oCliente.TipoDeClienteId = (int)cboTipo.SelectedValue;
                 oCliente.Sexo = cbxSexo.Text.Trim();
-             //   oCliente.Sexo = CheckboxM.Text.Trim();
                 oCliente.Telefono = txttelef.Text.Trim();
                 oCliente.Edad = (int.Parse(txtedad.Text.Trim()));
-                //oCliente.IdCliente = (int.Parse(txtid.Text.Trim()));
                 oCliente.Direccion = multilineDir.Text.Trim();
-
-              
-
 
                 if (oclienteDAO.Agregar(oCliente) == false)
                 {
@@ -105,22 +86,13 @@ namespace ProyectoBD.Catalogos
             {
                 Cliente oCliente = oclienteDAO.Buscar(txtCodig.Text.Trim());
 
-
-           
-
                 oCliente.Nombre = txtnombre.Text.Trim();
                 oCliente.Apellido = txtapellido.Text.Trim();
-                //oCliente.Sexo = CheckboxF.Text.Trim();
-                //oCliente.Sexo = CheckboxM.Text.Trim();
                 oCliente.Sexo = cbxSexo.Text.Trim();
                 oCliente.Telefono = txttelef.Text.Trim();
                 oCliente.Direccion = multilineDir.Text.Trim();
                 oCliente.Edad = (int.Parse(txtedad.Text.Trim()));
-                //oCliente.IdCliente = (int)txtid.SelectedValue;
-                //oCliente.NombresDelCliente = txtNombres.Text.Trim();
-                //oCliente.ApellidosDelCliente = txtApellidos.Text.Trim();
-                //oCliente.TipoDeClienteId = (int)cboTipo.SelectedValue;
-
+               
                 if (oclienteDAO.Modificar(oCliente) == false)
                 {
                     MessageBox.Show("El Registro no fue Modificado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -139,9 +111,9 @@ namespace ProyectoBD.Catalogos
 
             }
             LimpiarControles();
-            //DesactivaControles(true);
-           txtCodig.Text = "";
-           txtCodig.Focus();
+            DesactivaControles(true);
+            txtCodig.Text = "";
+            txtCodig.Focus();
 
         }
 
@@ -181,9 +153,9 @@ namespace ProyectoBD.Catalogos
 
         private void txtCodig_Validating(object sender, CancelEventArgs e)
         {
-            ////Cliente oCliente ;
-            //DesactivaControles(true);
-            //LimpiarControles();
+            
+            DesactivaControles(true);
+             LimpiarControles();
             if (txtCodig.Text.Trim().Length < 3)
             {
                 MessageBox.Show("Longitud debe ser 3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -196,17 +168,13 @@ namespace ProyectoBD.Catalogos
                 NuevoRegistro = false;
                 txtnombre.Text = oCliente.Nombre.Trim();
                 txtapellido.Text = oCliente.Apellido.Trim();
-                //CheckboxF.Text = oCliente.Sexo.Trim();
-                //CheckboxM.Text = oCliente.Sexo.Trim();
                 cbxSexo.Text = oCliente.Sexo.Trim();
-             //   txt.Sexo = cbxSexo.Text.Trim();
                 txttelef.Text = oCliente.Telefono.Trim();
                 multilineDir.Text = oCliente.Direccion.Trim();
                 txtedad.Text= oCliente.Edad.ToString();
-
-               // DesactivaControles(false);
-                btnguardar.Enabled = true;
-                btnelimi.Enabled = true;
+                DesactivaControles(false);
+                //btnguardar.Enabled = true;
+                //btnelimi.Enabled = true;
              
                 //cboTipo.SelectedValue = oCliente.TipoDeClienteId;
                 //DesactivaControles(false);
@@ -216,8 +184,8 @@ namespace ProyectoBD.Catalogos
             {
                 //LimpiarControles();
                 NuevoRegistro = true;
-                //DesactivaControles(false);
-                btnguardar.Enabled = true;
+                DesactivaControles(false);
+               // btnguardar.Enabled = true;
                 btnelimi.Enabled = false;
             }
 
@@ -238,25 +206,23 @@ namespace ProyectoBD.Catalogos
                     MessageBox.Show("El registro eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargar();
 
-                txtCodig.Text = "";
-                txtnombre.Text = "";
-                txtapellido.Text = "";
-              
-                multilineDir.Text = "";
-                txttelef.Text = "";
-                txtedad.Text = "";
 
-                btnguardar.Enabled = false;
-                btnelimi.Enabled = false;
-                //LimpiarControles();
-                //    DesactivaControles(true);
-                //    //txtCodig.Text = "";
-                    txtCodig.Focus();
+                //btnguardar.Enabled = false;
+                //btnelimi.Enabled = false;
+                LimpiarControles();
+                DesactivaControles(true);
+                txtCodig.Text = "";
+                txtCodig.Focus();
 
                 return;
 
                 }
             
+        }
+
+        private void btncanceC_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

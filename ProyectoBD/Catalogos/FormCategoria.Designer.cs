@@ -143,6 +143,7 @@ namespace ProyectoBD.Catalogos
             this.btncanceC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btncanceC.UseAccentColor = false;
             this.btncanceC.UseVisualStyleBackColor = false;
+            this.btncanceC.Click += new System.EventHandler(this.btncanceC_Click);
             // 
             // btnguardar
             // 
@@ -327,6 +328,7 @@ namespace ProyectoBD.Catalogos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCategoria";
             this.Text = "FormCategoria";
+            this.Load += new System.EventHandler(this.FormCategoria_Load);
             this.materialCard3.ResumeLayout(false);
             this.materialCard3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -47,9 +47,9 @@
             this.txtedad = new MaterialSkin.Controls.MaterialTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
             this.cbxSexo = new MaterialSkin.Controls.MaterialComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -213,6 +213,7 @@
             this.btncanceC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btncanceC.UseAccentColor = false;
             this.btncanceC.UseVisualStyleBackColor = false;
+            this.btncanceC.Click += new System.EventHandler(this.btncanceC_Click);
             // 
             // btnelimi
             // 
@@ -351,6 +352,17 @@
             this.materialCard2.Size = new System.Drawing.Size(1044, 540);
             this.materialCard2.TabIndex = 11;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // materialTextBox1
             // 
             this.materialTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -391,17 +403,6 @@
             this.cbxSexo.Size = new System.Drawing.Size(191, 49);
             this.cbxSexo.StartIndex = 0;
             this.cbxSexo.TabIndex = 23;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
             // 
             // FormCliente
             // 

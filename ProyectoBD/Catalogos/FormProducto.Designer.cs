@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducto));
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.CBC = new MaterialSkin.Controls.MaterialComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
             this.btnelimi = new MaterialSkin.Controls.MaterialButton();
-            this.btncanceC = new MaterialSkin.Controls.MaterialButton();
+            this.btntermi = new MaterialSkin.Controls.MaterialButton();
             this.btnguardar = new MaterialSkin.Controls.MaterialButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtprecio = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtCat = new MaterialSkin.Controls.MaterialTextBox();
             this.txtnom = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.materialMultiLineDes = new MaterialSkin.Controls.MaterialMultiLineTextBox();
@@ -46,7 +46,6 @@
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
-            this.CBC = new MaterialSkin.Controls.MaterialComboBox();
             this.materialCard3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,11 +58,10 @@
             this.materialCard3.Controls.Add(this.pictureBox1);
             this.materialCard3.Controls.Add(this.materialTextBox1);
             this.materialCard3.Controls.Add(this.btnelimi);
-            this.materialCard3.Controls.Add(this.btncanceC);
+            this.materialCard3.Controls.Add(this.btntermi);
             this.materialCard3.Controls.Add(this.btnguardar);
             this.materialCard3.Controls.Add(this.dataGridView1);
             this.materialCard3.Controls.Add(this.txtprecio);
-            this.materialCard3.Controls.Add(this.txtCat);
             this.materialCard3.Controls.Add(this.txtnom);
             this.materialCard3.Controls.Add(this.materialLabel7);
             this.materialCard3.Controls.Add(this.materialMultiLineDes);
@@ -81,6 +79,28 @@
             this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard3.Size = new System.Drawing.Size(1044, 540);
             this.materialCard3.TabIndex = 12;
+            // 
+            // CBC
+            // 
+            this.CBC.AutoResize = false;
+            this.CBC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CBC.Depth = 0;
+            this.CBC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.CBC.DropDownHeight = 174;
+            this.CBC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBC.DropDownWidth = 121;
+            this.CBC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.CBC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CBC.FormattingEnabled = true;
+            this.CBC.IntegralHeight = false;
+            this.CBC.ItemHeight = 43;
+            this.CBC.Location = new System.Drawing.Point(845, 110);
+            this.CBC.MaxDropDownItems = 4;
+            this.CBC.MouseState = MaterialSkin.MouseState.OUT;
+            this.CBC.Name = "CBC";
+            this.CBC.Size = new System.Drawing.Size(182, 49);
+            this.CBC.StartIndex = 0;
+            this.CBC.TabIndex = 27;
             // 
             // pictureBox1
             // 
@@ -127,25 +147,26 @@
             this.btnelimi.UseVisualStyleBackColor = true;
             this.btnelimi.Click += new System.EventHandler(this.btnelimi_Click);
             // 
-            // btncanceC
+            // btntermi
             // 
-            this.btncanceC.AutoSize = false;
-            this.btncanceC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btncanceC.BackColor = System.Drawing.Color.White;
-            this.btncanceC.Depth = 0;
-            this.btncanceC.DrawShadows = true;
-            this.btncanceC.HighEmphasis = true;
-            this.btncanceC.Icon = ((System.Drawing.Image)(resources.GetObject("btncanceC.Icon")));
-            this.btncanceC.Location = new System.Drawing.Point(291, 484);
-            this.btncanceC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btncanceC.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btncanceC.Name = "btncanceC";
-            this.btncanceC.Size = new System.Drawing.Size(173, 36);
-            this.btncanceC.TabIndex = 20;
-            this.btncanceC.Text = "Terminar";
-            this.btncanceC.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btncanceC.UseAccentColor = false;
-            this.btncanceC.UseVisualStyleBackColor = false;
+            this.btntermi.AutoSize = false;
+            this.btntermi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btntermi.BackColor = System.Drawing.Color.White;
+            this.btntermi.Depth = 0;
+            this.btntermi.DrawShadows = true;
+            this.btntermi.HighEmphasis = true;
+            this.btntermi.Icon = ((System.Drawing.Image)(resources.GetObject("btntermi.Icon")));
+            this.btntermi.Location = new System.Drawing.Point(291, 484);
+            this.btntermi.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btntermi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btntermi.Name = "btntermi";
+            this.btntermi.Size = new System.Drawing.Size(173, 36);
+            this.btntermi.TabIndex = 20;
+            this.btntermi.Text = "Terminar";
+            this.btntermi.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btntermi.UseAccentColor = false;
+            this.btntermi.UseVisualStyleBackColor = false;
+            this.btntermi.Click += new System.EventHandler(this.btntermi_Click);
             // 
             // btnguardar
             // 
@@ -194,20 +215,6 @@
             this.txtprecio.Size = new System.Drawing.Size(189, 50);
             this.txtprecio.TabIndex = 16;
             this.txtprecio.Text = "";
-            // 
-            // txtCat
-            // 
-            this.txtCat.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCat.Depth = 0;
-            this.txtCat.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtCat.Location = new System.Drawing.Point(787, 27);
-            this.txtCat.MaxLength = 50;
-            this.txtCat.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtCat.Multiline = false;
-            this.txtCat.Name = "txtCat";
-            this.txtCat.Size = new System.Drawing.Size(191, 50);
-            this.txtCat.TabIndex = 15;
-            this.txtCat.Text = "";
             // 
             // txtnom
             // 
@@ -318,28 +325,6 @@
             this.materialLabel12.TabIndex = 4;
             this.materialLabel12.Text = "Precio: ";
             // 
-            // CBC
-            // 
-            this.CBC.AutoResize = false;
-            this.CBC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CBC.Depth = 0;
-            this.CBC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.CBC.DropDownHeight = 174;
-            this.CBC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBC.DropDownWidth = 121;
-            this.CBC.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.CBC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CBC.FormattingEnabled = true;
-            this.CBC.IntegralHeight = false;
-            this.CBC.ItemHeight = 43;
-            this.CBC.Location = new System.Drawing.Point(845, 110);
-            this.CBC.MaxDropDownItems = 4;
-            this.CBC.MouseState = MaterialSkin.MouseState.OUT;
-            this.CBC.Name = "CBC";
-            this.CBC.Size = new System.Drawing.Size(182, 49);
-            this.CBC.StartIndex = 0;
-            this.CBC.TabIndex = 27;
-            // 
             // FormProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,6 +336,7 @@
             this.Name = "FormProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Producto";
+            this.Load += new System.EventHandler(this.FormProducto_Load);
             this.materialCard3.ResumeLayout(false);
             this.materialCard3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -364,7 +350,6 @@
         private MaterialSkin.Controls.MaterialCard materialCard3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialTextBox txtprecio;
-        private MaterialSkin.Controls.MaterialTextBox txtCat;
         private MaterialSkin.Controls.MaterialTextBox txtnom;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineDes;
@@ -374,7 +359,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel10;
         private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private MaterialSkin.Controls.MaterialButton btnelimi;
-        private MaterialSkin.Controls.MaterialButton btncanceC;
+        private MaterialSkin.Controls.MaterialButton btntermi;
         private MaterialSkin.Controls.MaterialButton btnguardar;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
         private System.Windows.Forms.PictureBox pictureBox1;

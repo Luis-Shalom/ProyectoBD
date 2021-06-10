@@ -14,9 +14,10 @@ namespace ProyectoBD.Catalogos
 {
     public partial class FormProducto : Form
     {
+        private CategoriaDAO tipoca = new CategoriaDAO();
         private ProductoDAO product = new ProductoDAO();
         private bool NuevoRegistro = false;
-        private Producto  ProduDAO;
+        private Producto ProduDAO;
         public FormProducto()
         {
             InitializeComponent();
@@ -32,30 +33,34 @@ namespace ProyectoBD.Catalogos
             }
 
         }
+
+        private void DesactivarControles(bool EstadoCtrl)
+        {
+            txtCod.Enabled = !EstadoCtrl;
+            txtnom.Enabled = !EstadoCtrl;
+            txtprecio.Enabled= !EstadoCtrl;
+            materialMultiLineDes.Enabled= !EstadoCtrl;
+            CBC.Enabled= !EstadoCtrl;
+            btnguardar.Enabled= !EstadoCtrl;
+            btnelimi.Enabled= !EstadoCtrl;
+
+
+        }
         private void LimpiarControles()
         {
-            //txtNombres.Text = "";
-            //txtApellidos.Text = "";
-            //cboTipo.SelectedIndex = -1;
 
             txtCod.Text = "";
             txtnom.Text = "";
             materialMultiLineDes.Text = "";
 
             txtprecio.Text = "";
-            CBC.SelectedIndex = -1;
-            //txtedad.Text = "";
-            ////txtid.Text = "";
-            //multilineDir.Text = "";
-
-            //no hay nada seleccionado
+            CBC.SelectedIndex = -1; //no hay nada seleccionado
+          
         }
         private void btnguardar_Click(object sender, EventArgs e)
         {
             if (NuevoRegistro == true)
             {
-
-
                 Producto produc = new Producto();
                 produc.Codigo = txtCod.Text.Trim();
                 produc.Nombre = txtnom.Text.Trim();
@@ -63,8 +68,6 @@ namespace ProyectoBD.Catalogos
                 produc.Descripcion =materialMultiLineDes.Text .Trim();
                 produc.Precio= int.Parse(txtprecio .Text.Trim());
                 
-
-
 
                 if (product.Agregar(produc) == false)
                 {
@@ -81,10 +84,7 @@ namespace ProyectoBD.Catalogos
             }
             else
             {
-               Producto Produt =product.Buscar(txtCod.Text.Trim());
-
-
-                //Produt.Codigo = txtCod.Text.Trim();
+                Producto Produt =product.Buscar(txtCod.Text.Trim());
                 Produt.Nombre = txtnom.Text.Trim();
                 Produt.IdCategoria = (int)CBC.SelectedValue;
                 Produt.Descripcion = materialMultiLineDes.Text.Trim();
@@ -110,7 +110,7 @@ namespace ProyectoBD.Catalogos
 
             }
             LimpiarControles();
-            //DesactivaControles(true);
+            DesactivarControles(true);
             txtCod.Text = "";
             txtCod.Focus();
 
@@ -132,19 +132,8 @@ namespace ProyectoBD.Catalogos
 
 
                 LimpiarControles();
-                //txtCodig.Text = "";
-                //txtnombre.Text = "";
-                //txtapellido.Text = "";
-
-                //multilineDir.Text = "";
-                //txttelef.Text = "";
-                //txtedad.Text = "";
-
-                btnguardar.Enabled = false;
-                btnelimi.Enabled = false;
-               //LimpiarControles();
-                //    DesactivaControles(true);
-                //    //txtCodig.Text = "";
+                DesactivarControles(true);
+                txtCod.Text = "";
                 txtCod.Focus();
 
                 return;
@@ -154,6 +143,8 @@ namespace ProyectoBD.Catalogos
 
         private void txtCod_Validating(object sender, CancelEventArgs e)
         {
+            DesactivarControles(true);
+            LimpiarControles();
             if (txtCod.Text.Trim().Length < 3)
             {
                 MessageBox.Show("Longitud debe ser 3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -168,9 +159,9 @@ namespace ProyectoBD.Catalogos
                 txtprecio.Text = ProduDAO.Precio.ToString();
                 materialMultiLineDes.Text = ProduDAO.Descripcion.Trim();
                 CBC.SelectedValue = ProduDAO.IdCategoria;
-                // DesactivaControles(false);
-                btnguardar.Enabled = true;
-                btnelimi.Enabled = true;
+                 DesactivarControles(false);
+                //btnguardar.Enabled = true;
+                //btnelimi.Enabled = true;
 
                 //cboTipo.SelectedValue = oCliente.TipoDeClienteId;
                 //DesactivaControles(false);
@@ -180,11 +171,25 @@ namespace ProyectoBD.Catalogos
             {
                 //LimpiarControles();
                 NuevoRegistro = true;
-                //DesactivaControles(false);
-                btnguardar.Enabled = true;
+                DesactivarControles(false);
+               // btnguardar.Enabled = true;
                 btnelimi.Enabled = false;
             }
 
+        }
+
+        private void FormProducto_Load(object sender, EventArgs e)
+        {
+            cargar();
+            CBC.DataSource = tipoca.listar();
+            CBC.DisplayMember = "Descripcion";
+            CBC.ValueMember = "Id";
+            CBC.SelectedIndex = -1;
+        }
+
+        private void btntermi_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -81,6 +81,9 @@ namespace ProyectoBD.Catalogos
             LimpiarControles();
             //DesactivaControles(true);
             txtcodi.Text = "";
+            materialMultiLineDesc.Text = "";
+            btnguardar.Enabled = false;
+            btnelimi.Enabled = false;
             txtcodi.Focus();
 
 
@@ -150,9 +153,19 @@ namespace ProyectoBD.Catalogos
                 txtnombre.Text = "";
                 materialMultiLineDesc.Text = "";
                 btnguardar.Enabled = true;
-                btnelimi.Enabled = true;
+                btnelimi.Enabled = false;
             }
 
+        }
+
+        private void FormCategoria_Load(object sender, EventArgs e)
+        {
+            cargar();
+        }
+
+        private void btncanceC_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
